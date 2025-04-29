@@ -1,3 +1,3 @@
 #pragma once
 
-void affiche(int** g,int s);
+void affiche(char** g,int s);

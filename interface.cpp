@@ -2,7 +2,7 @@
 #include <iostream>
 //#include <SFML/graphics.hpp>
 
-using grid=int**;
+using grid=char**;
 using ui=unsigned int;
 
 void affiche(grid g,int s){

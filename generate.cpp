@@ -4,14 +4,14 @@
 #include <fstream>
 #include <iostream>
 
-using grid=int**;
+using grid=char**;
 
 grid initialisePlateau(int s){  //s = size
     //generate
-    grid plateau = new int*[s];
+    grid plateau = new char*[s];
 
     for(int i=0;i<s;i++){
-        plateau[i]=new int[s];
+        plateau[i]=new char[s];
     }
 
     //fill with ' '

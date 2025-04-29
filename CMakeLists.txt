@@ -1,5 +1,14 @@
-find_package(SFML COMPONENTS graphics window system)
+cmake_minimum_required(VERSION 3.18)
+project(rush-hour)
+
+add_compile_options(-Wall)
 
 
-target_link_libraries(${PROJECT_NAME} PRIVATE
-    sfml-graphics sfml-window sfml-system)   
+add_executable(${PROJECT_NAME}.out
+    generate.cpp
+    gennewplateau.cpp
+    interface.cpp
+    main.cpp
+    move.cpp
+    solve.cpp
+)

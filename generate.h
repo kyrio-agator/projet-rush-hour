@@ -1,5 +1,5 @@
 #pragma once
 
-int** initialisePlateau(int s);
-void delete2Darray(int** grid,int s);
-grid lirePlateau(std::string l);
+char** initialisePlateau(int s);
+void delete2Darray(char** grid,int s);
+char** lirePlateau(std::string l);
