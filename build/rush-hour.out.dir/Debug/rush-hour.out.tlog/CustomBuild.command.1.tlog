@@ -1,0 +1,10 @@
+^C:\USERS\COMPTEADMIN\DESKTOP\PROJET\PROJET-RUSH-HOUR\CMAKELISTS.TXT
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/compteadmin/Desktop/projet/projet-rush-hour -BC:/Users/compteadmin/Desktop/projet/projet-rush-hour/build --check-stamp-file C:/Users/compteadmin/Desktop/projet/projet-rush-hour/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

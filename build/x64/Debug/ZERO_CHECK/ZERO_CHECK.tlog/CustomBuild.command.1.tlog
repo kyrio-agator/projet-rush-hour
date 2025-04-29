@@ -1,0 +1,10 @@
+^C:\USERS\COMPTEADMIN\DESKTOP\PROJET\PROJET-RUSH-HOUR\BUILD\CMAKEFILES\E0D73286181750C2A256E0B09ADC3F43\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/compteadmin/Desktop/projet/projet-rush-hour -BC:/Users/compteadmin/Desktop/projet/projet-rush-hour/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/Users/compteadmin/Desktop/projet/projet-rush-hour/build/rush-hour.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

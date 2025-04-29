@@ -1,8 +1,5 @@
 #include "generate.h"
-#include <array>
-#include <string>
-#include <fstream>
-#include <iostream>
+
 
 using grid=char**;
 

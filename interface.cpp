@@ -1,6 +1,5 @@
 #include "interface.h"
-#include <iostream>
-//#include <SFML/graphics.hpp>
+
 
 using grid=char**;
 using ui=unsigned int;
