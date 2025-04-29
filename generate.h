@@ -7,4 +7,5 @@
 
 char** initialisePlateau(int s);
 void delete2Darray(char** grid,int s);
-char** lirePlateau(std::string l);
+int getsizeplateau(std::string l);
+char** lirePlateau(std::string l,int s);

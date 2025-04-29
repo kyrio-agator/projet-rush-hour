@@ -7,7 +7,13 @@
 using grid=char**;
 
 int main(){
-    grid plateau=initialisePlateau(6);
-    affiche(plateau,6);
+    std::string l="../plateau/plateau1.txt";
+    
+    int s=getsizeplateau(l);
+    grid plateau=lirePlateau(l,s);
+    affiche(plateau,s);
+
+
+    delete2Darray(plateau,s);
     return 0;
 }
