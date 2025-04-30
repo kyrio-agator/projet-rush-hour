@@ -1,11 +1,6 @@
 #include "move.h"
 
 
-void printlist(coord* l,int s){
-    for(int i=0;i<s;i++){
-        std::cout<<l[i][0]<<' '<<l[i][1]<<std::endl;
-    }
-}
 
 char emptychr= '-';
 
@@ -76,7 +71,7 @@ void deplace(grid &plateau,int s,char c,char dir){
                         plateau[v[i][0]][v[i][1]+1]=c;
                     }
                 }
-                else{std::cout<<"la voiture "<<c<<" peux pas bouger a "<<dir;}
+                else{std::cout<<"la voiture "<<c<<" ne peux pas bouger a droite";}
 
             }
             if(dir=='g'){
@@ -91,29 +86,33 @@ void deplace(grid &plateau,int s,char c,char dir){
                         plateau[v[i][0]][v[i][1]-1]=c;
                     }
                 }
-                else{std::cout<<"la voiture "<<c<<" peux pas bouger a "<<dir;}
+                else{std::cout<<"la voiture "<<c<<" ne peux pas bouger a gauche";}
             }
         }
         else{
             //deplacement vertical
             if(dir=='b'){
                 //test si on peux deplacé a bas
+                if(v[taille_v-1][0]+1<=s-1){
                 if(plateau[v[taille_v-1][0]+1][v[taille_v-1][1]]==emptychr){
                     //suprimé la voiture
                     for(ui i=0;i<taille_v;i++){
-                        plateau[v[i][0]][v[i][1]]=emptychr;
-                    }
+                            plateau[v[i][0]][v[i][1]]=emptychr;
+                        }
                     //la remetre une case vers le bas
                     for(ui i=0;i<taille_v;i++){
-                        plateau[v[i][0]+1][v[i][1]]=c;
-                    }
+                            plateau[v[i][0]+1][v[i][1]]=c;
+                        }
                 }
-                else{std::cout<<"la voiture "<<c<<" peux pas bouger a "<<dir;}
-
+                else{std::cout<<"la voiture "<<c<<" ne peux pas bouger en bas";}
+                }
+                else{std::cout<<"la voiture "<<c<<" ne peux pas bouger en bas";}
             }
             if(dir=='h'){
                 //test si on peux deplacé en haut
+                if(v[0][0]-1>=0){
                 if(plateau[v[0][0]-1][v[0][1]]==emptychr){
+
                     //suprimé la voiture
                     for(ui i=0;i<taille_v;i++){
                         plateau[v[i][0]][v[i][1]]=emptychr;
@@ -123,7 +122,9 @@ void deplace(grid &plateau,int s,char c,char dir){
                         plateau[v[i][0]-1][v[i][1]]=c;
                     }
                 }
-                else{std::cout<<"la voiture "<<c<<" peux pas bouger a "<<dir;}
+                else{std::cout<<"la voiture "<<c<<" ne peux pas bouger en haut";}
+                }
+                else{std::cout<<"la voiture "<<c<<" ne peux pas bouger en haut";}
             }
         }
     }

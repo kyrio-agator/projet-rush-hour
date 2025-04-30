@@ -13,18 +13,19 @@ int main(){
     grid plateau=lirePlateau(l,s);
     affiche(plateau,s);
 
-    char voit=' ';char di=' ';
+    char vo=' ';char di=' ';
+    //boucle de jeu
     while(di!='v'){
         std::cout<<"#############"<<std::endl<<"v+d? :";
 
-        std::cin>>voit>>di;
-        deplace(plateau,s,voit,di);
+        std::cin>>vo>>di;
+        deplace(plateau,s,vo,di);
         affiche(plateau,s);
         if(victoire(plateau,s)){di='v';}
     }
 
     std::cout<<std::endl<<"gagne";
 
-    //delete2Darray(plateau,s);
+    delete2Darray(plateau,s);
     return 0;
 }

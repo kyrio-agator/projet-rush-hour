@@ -1,5 +1,9 @@
 # projet-rush-hour
 
+cd build
+cmake --build
+Debug\rush-hour.out.exe
+
 **s1**
 -minimum jouable (pas interface graph)
 -definir le formal de plateau
