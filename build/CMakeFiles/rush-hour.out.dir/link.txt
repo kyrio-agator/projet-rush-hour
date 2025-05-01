@@ -1,0 +1,3 @@
+"C:\Program Files\CMake\bin\cmake.exe" -E rm -f CMakeFiles\rush-hour.out.dir/objects.a
+C:\msys64\ucrt64\bin\ar.exe qc CMakeFiles\rush-hour.out.dir/objects.a @CMakeFiles\rush-hour.out.dir\objects1.rsp
+C:\msys64\ucrt64\bin\g++.exe -g -Wl,--whole-archive CMakeFiles\rush-hour.out.dir/objects.a -Wl,--no-whole-archive -o rush-hour.out.exe -Wl,--out-implib,librush-hour.out.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\rush-hour.out.dir\linkLibs.rsp

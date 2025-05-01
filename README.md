@@ -1,8 +1,11 @@
 # projet-rush-hour
 
+##compilation + execution
 cd build
-cmake --build
-Debug\rush-hour.out.exe
+cmake --build .
+./rush-hour.out.exe
+
+##timeline
 
 **s1**
 -minimum jouable (pas interface graph)
@@ -21,3 +24,4 @@ Debug\rush-hour.out.exe
 -finir IA
 -finir programe
 -finir site web
+

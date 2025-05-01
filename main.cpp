@@ -7,8 +7,10 @@
 using grid=char**;
 
 int main(){
+    std::cout<<"skill issue"<<std::endl;
+
     std::string l="../plateau/plateau1.txt";
-    
+
     int s=getsizeplateau(l);
     grid plateau=lirePlateau(l,s);
     affiche(plateau,s);

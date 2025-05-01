@@ -36,6 +36,7 @@ int getsizeplateau(std::string l){
         std::getline(fic, line);
         return line.length();
     }   
+    return 0;
 }
 
 grid lirePlateau(std::string l,int s){

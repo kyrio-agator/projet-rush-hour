@@ -1,0 +1,38 @@
+[
+{
+  "directory": "C:/Users/compteadmin/Desktop/projet/projet-rush-hour/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe   -g -Wall -o CMakeFiles\\rush-hour.out.dir\\generate.cpp.obj -c C:\\Users\\compteadmin\\Desktop\\projet\\projet-rush-hour\\generate.cpp",
+  "file": "C:/Users/compteadmin/Desktop/projet/projet-rush-hour/generate.cpp",
+  "output": "CMakeFiles/rush-hour.out.dir/generate.cpp.obj"
+},
+{
+  "directory": "C:/Users/compteadmin/Desktop/projet/projet-rush-hour/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe   -g -Wall -o CMakeFiles\\rush-hour.out.dir\\gennewplateau.cpp.obj -c C:\\Users\\compteadmin\\Desktop\\projet\\projet-rush-hour\\gennewplateau.cpp",
+  "file": "C:/Users/compteadmin/Desktop/projet/projet-rush-hour/gennewplateau.cpp",
+  "output": "CMakeFiles/rush-hour.out.dir/gennewplateau.cpp.obj"
+},
+{
+  "directory": "C:/Users/compteadmin/Desktop/projet/projet-rush-hour/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe   -g -Wall -o CMakeFiles\\rush-hour.out.dir\\interface.cpp.obj -c C:\\Users\\compteadmin\\Desktop\\projet\\projet-rush-hour\\interface.cpp",
+  "file": "C:/Users/compteadmin/Desktop/projet/projet-rush-hour/interface.cpp",
+  "output": "CMakeFiles/rush-hour.out.dir/interface.cpp.obj"
+},
+{
+  "directory": "C:/Users/compteadmin/Desktop/projet/projet-rush-hour/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe   -g -Wall -o CMakeFiles\\rush-hour.out.dir\\main.cpp.obj -c C:\\Users\\compteadmin\\Desktop\\projet\\projet-rush-hour\\main.cpp",
+  "file": "C:/Users/compteadmin/Desktop/projet/projet-rush-hour/main.cpp",
+  "output": "CMakeFiles/rush-hour.out.dir/main.cpp.obj"
+},
+{
+  "directory": "C:/Users/compteadmin/Desktop/projet/projet-rush-hour/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe   -g -Wall -o CMakeFiles\\rush-hour.out.dir\\move.cpp.obj -c C:\\Users\\compteadmin\\Desktop\\projet\\projet-rush-hour\\move.cpp",
+  "file": "C:/Users/compteadmin/Desktop/projet/projet-rush-hour/move.cpp",
+  "output": "CMakeFiles/rush-hour.out.dir/move.cpp.obj"
+},
+{
+  "directory": "C:/Users/compteadmin/Desktop/projet/projet-rush-hour/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe   -g -Wall -o CMakeFiles\\rush-hour.out.dir\\solve.cpp.obj -c C:\\Users\\compteadmin\\Desktop\\projet\\projet-rush-hour\\solve.cpp",
+  "file": "C:/Users/compteadmin/Desktop/projet/projet-rush-hour/solve.cpp",
+  "output": "CMakeFiles/rush-hour.out.dir/solve.cpp.obj"
+}
+]
