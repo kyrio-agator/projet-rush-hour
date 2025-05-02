@@ -7,7 +7,7 @@ https://www.sfml-dev.org/download/sfml/3.0.0/#windows
 ## compilation + execution
 cd build
 cmake --build .
-./rush-hour.out.exe
+../rush-hour.out.exe
 
 ## timeline
 
