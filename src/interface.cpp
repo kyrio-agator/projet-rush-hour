@@ -15,7 +15,7 @@ void affiche(grid g,int s){
     }
 }
 
-void testSFML()
+void interfaceSFML()
 {
     // Create a window with the title "SFML Window" and size 800x600
     sf::RenderWindow window(sf::VideoMode(800, 600), "SFML Window");

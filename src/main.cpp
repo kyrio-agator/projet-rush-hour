@@ -9,9 +9,9 @@ using grid=char**;
 int main(){
     std::cout<<"skill issue"<<std::endl;
 
-    testSFML();
+    //interfaceSFML();
 
-    std::string l="../plateau/plateau1.txt";
+    std::string l="./plateau/plateau1.txt";
 
     int s=getsizeplateau(l);
     grid plateau=lirePlateau(l,s);
@@ -20,7 +20,7 @@ int main(){
     char vo=' ';char di=' ';
     //boucle de jeu
     while(di!='v'){
-        std::cout<<"#############"<<std::endl<<"v+d? :";
+        std::cout<<"----------------"<<std::endl<<"symbole de voiture + b/h/d/g"<<std::endl;
 
         std::cin>>vo>>di;
         deplace(plateau,s,vo,di);

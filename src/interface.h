@@ -6,4 +6,4 @@
 #include <SFML/System.hpp>
 
 void affiche(char** g,int s);
-void testSFML();
+void interfaceSFML();
