@@ -1,11 +1,17 @@
 # projet-rush-hour
 
-##compilation + execution
+
+## installer SFML
+https://www.sfml-dev.org/download/sfml/3.0.0/#windows
+
+## compilation + execution
 cd build
 cmake --build .
 ./rush-hour.out.exe
 
-##timeline
+## timeline
+
+
 
 **s1**
 -minimum jouable (pas interface graph)

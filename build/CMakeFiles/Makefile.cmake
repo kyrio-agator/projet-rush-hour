@@ -127,6 +127,11 @@ set(CMAKE_MAKEFILE_DEPENDS
   "CMakeFiles/4.0.1/CMakeCXXCompiler.cmake"
   "CMakeFiles/4.0.1/CMakeRCCompiler.cmake"
   "CMakeFiles/4.0.1/CMakeSystem.cmake"
+  "C:/msys64/ucrt64/lib/cmake/SFML/SFMLConfig.cmake"
+  "C:/msys64/ucrt64/lib/cmake/SFML/SFMLConfigDependencies.cmake"
+  "C:/msys64/ucrt64/lib/cmake/SFML/SFMLConfigVersion.cmake"
+  "C:/msys64/ucrt64/lib/cmake/SFML/SFMLSharedTargets-release.cmake"
+  "C:/msys64/ucrt64/lib/cmake/SFML/SFMLSharedTargets.cmake"
   )
 
 # The corresponding makefile is:
@@ -150,5 +155,5 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
-  "CMakeFiles/rush-hour.out.dir/DependInfo.cmake"
+  "CMakeFiles/rush-hour.dir/DependInfo.cmake"
   )

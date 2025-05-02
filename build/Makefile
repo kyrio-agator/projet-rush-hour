@@ -116,161 +116,161 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named rush-hour.out
+# Target rules for targets named rush-hour
 
 # Build rule for target.
-rush-hour.out: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 rush-hour.out
-.PHONY : rush-hour.out
+rush-hour: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 rush-hour
+.PHONY : rush-hour
 
 # fast build rule for target.
-rush-hour.out/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\rush-hour.out.dir\build.make CMakeFiles/rush-hour.out.dir/build
-.PHONY : rush-hour.out/fast
+rush-hour/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\rush-hour.dir\build.make CMakeFiles/rush-hour.dir/build
+.PHONY : rush-hour/fast
 
-generate.obj: generate.cpp.obj
-.PHONY : generate.obj
-
-# target to build an object file
-generate.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\rush-hour.out.dir\build.make CMakeFiles/rush-hour.out.dir/generate.cpp.obj
-.PHONY : generate.cpp.obj
-
-generate.i: generate.cpp.i
-.PHONY : generate.i
-
-# target to preprocess a source file
-generate.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\rush-hour.out.dir\build.make CMakeFiles/rush-hour.out.dir/generate.cpp.i
-.PHONY : generate.cpp.i
-
-generate.s: generate.cpp.s
-.PHONY : generate.s
-
-# target to generate assembly for a file
-generate.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\rush-hour.out.dir\build.make CMakeFiles/rush-hour.out.dir/generate.cpp.s
-.PHONY : generate.cpp.s
-
-gennewplateau.obj: gennewplateau.cpp.obj
-.PHONY : gennewplateau.obj
+src/generate.obj: src/generate.cpp.obj
+.PHONY : src/generate.obj
 
 # target to build an object file
-gennewplateau.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\rush-hour.out.dir\build.make CMakeFiles/rush-hour.out.dir/gennewplateau.cpp.obj
-.PHONY : gennewplateau.cpp.obj
+src/generate.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\rush-hour.dir\build.make CMakeFiles/rush-hour.dir/src/generate.cpp.obj
+.PHONY : src/generate.cpp.obj
 
-gennewplateau.i: gennewplateau.cpp.i
-.PHONY : gennewplateau.i
+src/generate.i: src/generate.cpp.i
+.PHONY : src/generate.i
 
 # target to preprocess a source file
-gennewplateau.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\rush-hour.out.dir\build.make CMakeFiles/rush-hour.out.dir/gennewplateau.cpp.i
-.PHONY : gennewplateau.cpp.i
+src/generate.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\rush-hour.dir\build.make CMakeFiles/rush-hour.dir/src/generate.cpp.i
+.PHONY : src/generate.cpp.i
 
-gennewplateau.s: gennewplateau.cpp.s
-.PHONY : gennewplateau.s
+src/generate.s: src/generate.cpp.s
+.PHONY : src/generate.s
 
 # target to generate assembly for a file
-gennewplateau.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\rush-hour.out.dir\build.make CMakeFiles/rush-hour.out.dir/gennewplateau.cpp.s
-.PHONY : gennewplateau.cpp.s
+src/generate.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\rush-hour.dir\build.make CMakeFiles/rush-hour.dir/src/generate.cpp.s
+.PHONY : src/generate.cpp.s
 
-interface.obj: interface.cpp.obj
-.PHONY : interface.obj
+src/gennewplateau.obj: src/gennewplateau.cpp.obj
+.PHONY : src/gennewplateau.obj
 
 # target to build an object file
-interface.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\rush-hour.out.dir\build.make CMakeFiles/rush-hour.out.dir/interface.cpp.obj
-.PHONY : interface.cpp.obj
+src/gennewplateau.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\rush-hour.dir\build.make CMakeFiles/rush-hour.dir/src/gennewplateau.cpp.obj
+.PHONY : src/gennewplateau.cpp.obj
 
-interface.i: interface.cpp.i
-.PHONY : interface.i
+src/gennewplateau.i: src/gennewplateau.cpp.i
+.PHONY : src/gennewplateau.i
 
 # target to preprocess a source file
-interface.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\rush-hour.out.dir\build.make CMakeFiles/rush-hour.out.dir/interface.cpp.i
-.PHONY : interface.cpp.i
+src/gennewplateau.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\rush-hour.dir\build.make CMakeFiles/rush-hour.dir/src/gennewplateau.cpp.i
+.PHONY : src/gennewplateau.cpp.i
 
-interface.s: interface.cpp.s
-.PHONY : interface.s
+src/gennewplateau.s: src/gennewplateau.cpp.s
+.PHONY : src/gennewplateau.s
 
 # target to generate assembly for a file
-interface.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\rush-hour.out.dir\build.make CMakeFiles/rush-hour.out.dir/interface.cpp.s
-.PHONY : interface.cpp.s
+src/gennewplateau.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\rush-hour.dir\build.make CMakeFiles/rush-hour.dir/src/gennewplateau.cpp.s
+.PHONY : src/gennewplateau.cpp.s
 
-main.obj: main.cpp.obj
-.PHONY : main.obj
+src/interface.obj: src/interface.cpp.obj
+.PHONY : src/interface.obj
 
 # target to build an object file
-main.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\rush-hour.out.dir\build.make CMakeFiles/rush-hour.out.dir/main.cpp.obj
-.PHONY : main.cpp.obj
+src/interface.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\rush-hour.dir\build.make CMakeFiles/rush-hour.dir/src/interface.cpp.obj
+.PHONY : src/interface.cpp.obj
 
-main.i: main.cpp.i
-.PHONY : main.i
+src/interface.i: src/interface.cpp.i
+.PHONY : src/interface.i
 
 # target to preprocess a source file
-main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\rush-hour.out.dir\build.make CMakeFiles/rush-hour.out.dir/main.cpp.i
-.PHONY : main.cpp.i
+src/interface.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\rush-hour.dir\build.make CMakeFiles/rush-hour.dir/src/interface.cpp.i
+.PHONY : src/interface.cpp.i
 
-main.s: main.cpp.s
-.PHONY : main.s
+src/interface.s: src/interface.cpp.s
+.PHONY : src/interface.s
 
 # target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\rush-hour.out.dir\build.make CMakeFiles/rush-hour.out.dir/main.cpp.s
-.PHONY : main.cpp.s
+src/interface.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\rush-hour.dir\build.make CMakeFiles/rush-hour.dir/src/interface.cpp.s
+.PHONY : src/interface.cpp.s
 
-move.obj: move.cpp.obj
-.PHONY : move.obj
+src/main.obj: src/main.cpp.obj
+.PHONY : src/main.obj
 
 # target to build an object file
-move.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\rush-hour.out.dir\build.make CMakeFiles/rush-hour.out.dir/move.cpp.obj
-.PHONY : move.cpp.obj
+src/main.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\rush-hour.dir\build.make CMakeFiles/rush-hour.dir/src/main.cpp.obj
+.PHONY : src/main.cpp.obj
 
-move.i: move.cpp.i
-.PHONY : move.i
+src/main.i: src/main.cpp.i
+.PHONY : src/main.i
 
 # target to preprocess a source file
-move.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\rush-hour.out.dir\build.make CMakeFiles/rush-hour.out.dir/move.cpp.i
-.PHONY : move.cpp.i
+src/main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\rush-hour.dir\build.make CMakeFiles/rush-hour.dir/src/main.cpp.i
+.PHONY : src/main.cpp.i
 
-move.s: move.cpp.s
-.PHONY : move.s
+src/main.s: src/main.cpp.s
+.PHONY : src/main.s
 
 # target to generate assembly for a file
-move.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\rush-hour.out.dir\build.make CMakeFiles/rush-hour.out.dir/move.cpp.s
-.PHONY : move.cpp.s
+src/main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\rush-hour.dir\build.make CMakeFiles/rush-hour.dir/src/main.cpp.s
+.PHONY : src/main.cpp.s
 
-solve.obj: solve.cpp.obj
-.PHONY : solve.obj
+src/move.obj: src/move.cpp.obj
+.PHONY : src/move.obj
 
 # target to build an object file
-solve.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\rush-hour.out.dir\build.make CMakeFiles/rush-hour.out.dir/solve.cpp.obj
-.PHONY : solve.cpp.obj
+src/move.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\rush-hour.dir\build.make CMakeFiles/rush-hour.dir/src/move.cpp.obj
+.PHONY : src/move.cpp.obj
 
-solve.i: solve.cpp.i
-.PHONY : solve.i
+src/move.i: src/move.cpp.i
+.PHONY : src/move.i
 
 # target to preprocess a source file
-solve.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\rush-hour.out.dir\build.make CMakeFiles/rush-hour.out.dir/solve.cpp.i
-.PHONY : solve.cpp.i
+src/move.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\rush-hour.dir\build.make CMakeFiles/rush-hour.dir/src/move.cpp.i
+.PHONY : src/move.cpp.i
 
-solve.s: solve.cpp.s
-.PHONY : solve.s
+src/move.s: src/move.cpp.s
+.PHONY : src/move.s
 
 # target to generate assembly for a file
-solve.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\rush-hour.out.dir\build.make CMakeFiles/rush-hour.out.dir/solve.cpp.s
-.PHONY : solve.cpp.s
+src/move.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\rush-hour.dir\build.make CMakeFiles/rush-hour.dir/src/move.cpp.s
+.PHONY : src/move.cpp.s
+
+src/solve.obj: src/solve.cpp.obj
+.PHONY : src/solve.obj
+
+# target to build an object file
+src/solve.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\rush-hour.dir\build.make CMakeFiles/rush-hour.dir/src/solve.cpp.obj
+.PHONY : src/solve.cpp.obj
+
+src/solve.i: src/solve.cpp.i
+.PHONY : src/solve.i
+
+# target to preprocess a source file
+src/solve.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\rush-hour.dir\build.make CMakeFiles/rush-hour.dir/src/solve.cpp.i
+.PHONY : src/solve.cpp.i
+
+src/solve.s: src/solve.cpp.s
+.PHONY : src/solve.s
+
+# target to generate assembly for a file
+src/solve.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\rush-hour.dir\build.make CMakeFiles/rush-hour.dir/src/solve.cpp.s
+.PHONY : src/solve.cpp.s
 
 # Help Target
 help:
@@ -280,25 +280,25 @@ help:
 	@echo ... depend
 	@echo ... edit_cache
 	@echo ... rebuild_cache
-	@echo ... rush-hour.out
-	@echo ... generate.obj
-	@echo ... generate.i
-	@echo ... generate.s
-	@echo ... gennewplateau.obj
-	@echo ... gennewplateau.i
-	@echo ... gennewplateau.s
-	@echo ... interface.obj
-	@echo ... interface.i
-	@echo ... interface.s
-	@echo ... main.obj
-	@echo ... main.i
-	@echo ... main.s
-	@echo ... move.obj
-	@echo ... move.i
-	@echo ... move.s
-	@echo ... solve.obj
-	@echo ... solve.i
-	@echo ... solve.s
+	@echo ... rush-hour
+	@echo ... src/generate.obj
+	@echo ... src/generate.i
+	@echo ... src/generate.s
+	@echo ... src/gennewplateau.obj
+	@echo ... src/gennewplateau.i
+	@echo ... src/gennewplateau.s
+	@echo ... src/interface.obj
+	@echo ... src/interface.i
+	@echo ... src/interface.s
+	@echo ... src/main.obj
+	@echo ... src/main.i
+	@echo ... src/main.s
+	@echo ... src/move.obj
+	@echo ... src/move.i
+	@echo ... src/move.s
+	@echo ... src/solve.obj
+	@echo ... src/solve.i
+	@echo ... src/solve.s
 .PHONY : help
 
 
