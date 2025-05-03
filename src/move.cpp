@@ -71,7 +71,7 @@ void deplace(grid &plateau,int s,char c,char dir){
                         plateau[v[i][0]][v[i][1]+1]=c;
                     }
                 }
-                else{std::cout<<"la voiture "<<c<<" ne peux pas bouger a droite";}
+                else{std::cout<<"la voiture "<<c<<" ne peux pas bouger a droite"<<std::endl;}
 
             }
             if(dir=='g'){
@@ -86,7 +86,7 @@ void deplace(grid &plateau,int s,char c,char dir){
                         plateau[v[i][0]][v[i][1]-1]=c;
                     }
                 }
-                else{std::cout<<"la voiture "<<c<<" ne peux pas bouger a gauche";}
+                else{std::cout<<"la voiture "<<c<<" ne peux pas bouger a gauche"<<std::endl;}
             }
         }
         else{
@@ -104,9 +104,9 @@ void deplace(grid &plateau,int s,char c,char dir){
                             plateau[v[i][0]+1][v[i][1]]=c;
                         }
                 }
-                else{std::cout<<"la voiture "<<c<<" ne peux pas bouger en bas";}
+                else{std::cout<<"la voiture "<<c<<" ne peux pas bouger en bas"<<std::endl;}
                 }
-                else{std::cout<<"la voiture "<<c<<" ne peux pas bouger en bas";}
+                else{std::cout<<"la voiture "<<c<<" ne peux pas bouger en bas"<<std::endl;}
             }
             if(dir=='h'){
                 //test si on peux deplacé en haut
@@ -122,9 +122,9 @@ void deplace(grid &plateau,int s,char c,char dir){
                         plateau[v[i][0]-1][v[i][1]]=c;
                     }
                 }
-                else{std::cout<<"la voiture "<<c<<" ne peux pas bouger en haut";}
+                else{std::cout<<"la voiture "<<c<<" ne peux pas bouger en haut"<<std::endl;}
                 }
-                else{std::cout<<"la voiture "<<c<<" ne peux pas bouger en haut";}
+                else{std::cout<<"la voiture "<<c<<" ne peux pas bouger en haut"<<std::endl;}
             }
         }
     }

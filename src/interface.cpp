@@ -2,9 +2,6 @@
 
 
 
-
-using grid=char**;
-
 void affiche(grid g,int s){
     std::cout<<std::endl;
     for(int i=0;i<s;i++){
@@ -15,26 +12,38 @@ void affiche(grid g,int s){
     }
 }
 
-void interfaceSFML()
-{
-    // Create a window with the title "SFML Window" and size 800x600
-    sf::RenderWindow window(sf::VideoMode(800, 600), "SFML Window");
+sf::Color charToColor(char c) {
+    if(c=='X'){return sf::Color::Red;}
+    if(c=='A'){return sf::Color::Blue;}
+    if(c=='B'){return sf::Color::Green;}
+    if(c=='C'){return sf::Color::Yellow;}
+    else{return sf::Color::White;}
+}
 
-    // Main loop that continues until the window is closed
-    while (window.isOpen())
-    {
-        sf::Event event;
-        while (window.pollEvent(event))
-        {
-            // Close the window if the close event is received
-            if (event.type == sf::Event::Closed)
-                window.close();
+void interfaceSFML(sf::RenderWindow &window, grid plateau,int size,char vo) {
+    float cellSize = window.getSize().x / size; // Scale cells to fit within 600x600
+
+    window.clear(sf::Color::White); // Clear with background color
+
+
+    for (int i = 0; i < size; ++i) {
+        for (int j = 0; j < size; ++j) {
+
+            sf::RectangleShape cell(sf::Vector2f(cellSize, cellSize));
+            cell.setPosition(j * cellSize, i * cellSize);
+
+            char currentChar = plateau[i][j];
+
+            if (currentChar == emptychr) {cell.setFillColor(sf::Color(128, 128, 128));}
+            else{
+                cell.setFillColor(charToColor(currentChar));
+                if(currentChar==vo){
+                    cell.setOutlineColor(sf::Color::Black);
+                    cell.setOutlineThickness(1.0f);
+                    }
+                }
+            window.draw(cell);    
         }
-
-        // Clear the window with black color
-        window.clear(sf::Color::Black);
-
-        // Display the current frame
-        window.display();
     }
+    window.display();
 }

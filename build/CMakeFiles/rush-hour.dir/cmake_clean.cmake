@@ -1,7 +1,4 @@
 file(REMOVE_RECURSE
-  "C:/Users/compteadmin/Desktop/projet/projet-rush-hour/rush-hour.exe"
-  "C:/Users/compteadmin/Desktop/projet/projet-rush-hour/rush-hour.exe.manifest"
-  "C:/Users/compteadmin/Desktop/projet/projet-rush-hour/rush-hour.pdb"
   "CMakeFiles/rush-hour.dir/src/generate.cpp.obj"
   "CMakeFiles/rush-hour.dir/src/generate.cpp.obj.d"
   "CMakeFiles/rush-hour.dir/src/gennewplateau.cpp.obj"
@@ -15,6 +12,9 @@ file(REMOVE_RECURSE
   "CMakeFiles/rush-hour.dir/src/solve.cpp.obj"
   "CMakeFiles/rush-hour.dir/src/solve.cpp.obj.d"
   "librush-hour.dll.a"
+  "rush-hour.exe"
+  "rush-hour.exe.manifest"
+  "rush-hour.pdb"
 )
 
 # Per-language clean rules from dependency scanning.

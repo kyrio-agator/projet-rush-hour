@@ -2,10 +2,10 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "C:/Users/compteadmin/Desktop/projet/projet-rush-hour/rush-hour.exe"
+			"path" : "rush-hour.exe"
 		},
 		{
-			"path" : "C:/Users/compteadmin/Desktop/projet/projet-rush-hour/rush-hour.pdb"
+			"path" : "rush-hour.pdb"
 		}
 	],
 	"backtrace" : 1,

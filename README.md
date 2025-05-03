@@ -16,12 +16,12 @@ cmake --build .
 
 
 **s1**
--minimum jouable (pas interface graph)  
--definir le formal de plateau
+✓ minimum jouable (pas interface graph)  
+✓ definir le formal de plateau
 
 **s2**
--chargement des plateau  (donné 5 plateau) (nimporte quelle taille)  
--interface graphique 1 joueur  
+✓ chargement des plateau  (donné 5 plateau) (nimporte quelle taille)  
+✓ interface graphique 1 joueur  
 -commencé a reflechire sur l'IA
 
 **s3**
