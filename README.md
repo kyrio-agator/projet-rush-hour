@@ -13,23 +13,21 @@ cmake --build .
 
 ## timeline
 
-
-
-**s1**
+**s1**  
 ✓ minimum jouable (pas interface graph)  
-✓ definir le formal de plateau
+✓ definir le formal de plateau  
 
-**s2**
+**s2**  
 ✓ chargement des plateau  (donné 5 plateau) (nimporte quelle taille)  
 ✓ interface graphique 1 joueur  
--commencé a reflechire sur l'IA
+-commencé a reflechire sur l'IA  
 
-**s3**
+**s3**  
 -testé IA  
--comencé reflection site web
+-comencé reflection site web  
 
-**s4**
+**s4**  
 -finir IA  
 -finir programe  
--finir site web
+-finir site web  
 
