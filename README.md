@@ -1,14 +1,11 @@
 # projet-rush-hour
 
-
 ## installer SFML
-https://www.sfml-dev.org/download/sfml/3.0.0/#windows  
-
-sa ma pris 2 jour a faire fonctionné SFML donc si sa marche pas,bonne chance
+https://www.sfml-dev.org/download/sfml/2.5.0/ 
 
 ## compilation + execution
-cd .\build\
-cmake ..\CMakeLists.txt -G "MinGW Makefiles"
+cd .\build\  
+cmake ..\CMakeLists.txt -G "MinGW Makefiles"  
 cmake --build .  
 ./rush-hour.out.exe  
 
