@@ -3,9 +3,7 @@ project(rush-hour)
 
 add_compile_options(-Wall)
 
-#set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR})
 find_package(SFML COMPONENTS graphics window system)
-
 
 add_executable(${PROJECT_NAME}
     src/generate.cpp
