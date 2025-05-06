@@ -1,0 +1,17 @@
+{
+    "nom": "Plateau 2",
+    "niveau": 2,
+    "largeur": 6,
+    "hauteur": 6,
+    "voitures": [ 
+        {"id":"A","x": 1, "y": 1, "taille": 2, "orientation" : "horizontale" }, 
+        {"id":"B","x": 3, "y": 1, "taille": 2, "orientation" : "verticale" },
+        {"id":"C","x": 4, "y": 1, "taille": 3, "orientation" : "verticale" },
+        {"id":"D","x": 1, "y": 4, "taille": 3, "orientation" : "verticale" },
+        {"id":"E","x": 3, "y": 4, "taille": 3, "orientation" : "horizontale" },
+        {"id":"F","x": 5, "y": 5, "taille": 2, "orientation" : "verticale" },
+        {"id":"G","x": 3, "y": 6, "taille": 2, "orientation" : "horizontale" }
+    ],
+    "voiture_dep": {"id":"X","x_dep": 1, "y_dep": 3, "taille_dep": 2, "orientation_dep": "horizontale"},
+    "sortie" : {"x_sortie" : 6, "y_sortie": 1}
+    }

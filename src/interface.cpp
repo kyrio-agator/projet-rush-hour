@@ -1,12 +1,18 @@
 #include "interface.h"
 
 
-
-void affiche(grid g,int s){
+void interfaceText(sgrid plateau){
     std::cout<<std::endl;
-    for(int i=0;i<s;i++){
-        for(int j=0;j<s;j++){
-            std::cout<<g[i][j];
+    std::cout << "Nom: " << plateau.nom << "\n";
+    std::cout << "niveau: " << plateau.niv << "\n";
+    std::cout << "Taille: " << plateau.taille[0] << " x " << plateau.taille[1] << "\n";
+    std::cout << "Voiture de depart: " << plateau.v_dep << "\n";
+    std::cout << "Sortie: (" << plateau.fin[0] << ", " << plateau.fin[1] << ")\n";
+    std::cout << "Grille:\n";
+
+    for(int i=0;i<plateau.taille[0];i++){
+        for(int j=0;j<plateau.taille[1];j++){
+            std::cout<<plateau.val[i][j];
         }
         std::cout<<std::endl;
     }
@@ -17,22 +23,27 @@ sf::Color charToColor(char c) {
     if(c=='A'){return sf::Color::Blue;}
     if(c=='B'){return sf::Color::Green;}
     if(c=='C'){return sf::Color::Yellow;}
+    if(c=='D'){return sf::Color::Magenta;}
+    if(c=='E'){return sf::Color::Cyan;}
+    if(c=='F'){return sf::Color(139,69,19);}
+    if(c=='G'){return sf::Color(200,200,200);}
     else{return sf::Color::White;}
 }
 
-void interfaceSFML(sf::RenderWindow &window, grid plateau,int size,char vo) {
-    float cellSize = window.getSize().x / size; // Scale cells to fit within 600x600
+void interfaceSFML(sf::RenderWindow &window, sgrid plateau,char vo) {
+    float cellSizeX = window.getSize().x / plateau.taille[1];
+    float cellSizeY = window.getSize().y / plateau.taille[0];
 
     window.clear(sf::Color::White); // Clear with background color
 
 
-    for (int i = 0; i < size; ++i) {
-        for (int j = 0; j < size; ++j) {
+    for (int i = 0; i < plateau.taille[0]; ++i) {
+        for (int j = 0; j < plateau.taille[1]; ++j) {
 
-            sf::RectangleShape cell(sf::Vector2f(cellSize, cellSize));
-            cell.setPosition(j * cellSize, i * cellSize);
+            sf::RectangleShape cell(sf::Vector2f(cellSizeX,cellSizeY));
+            cell.setPosition(j * cellSizeX, i * cellSizeY);
 
-            char currentChar = plateau[i][j];
+            char currentChar = plateau.val[i][j];
 
             if (currentChar == emptychr) {cell.setFillColor(sf::Color(128, 128, 128));}
             else{
@@ -45,5 +56,18 @@ void interfaceSFML(sf::RenderWindow &window, grid plateau,int size,char vo) {
             window.draw(cell);    
         }
     }
+    sf::CircleShape circle;
+    float radius = std::min(cellSizeX, cellSizeY) / 6.0f;
+    circle.setRadius(radius);
+    circle.setFillColor(sf::Color::Black);
+
+    // Position the circle at center of the (cx, cy) cell
+    float posX = plateau.fin[0] * cellSizeX + cellSizeX / 2.0f - radius;
+    float posY = plateau.fin[1] * cellSizeY + cellSizeY / 2.0f - radius;
+    circle.setPosition(posX, posY);
+
+    window.draw(circle);
+
+
     window.display();
 }

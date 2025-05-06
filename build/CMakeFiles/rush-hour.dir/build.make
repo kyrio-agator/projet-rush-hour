@@ -72,107 +72,113 @@ CMakeFiles/rush-hour.dir/codegen:
 .PHONY : CMakeFiles/rush-hour.dir/codegen
 
 CMakeFiles/rush-hour.dir/src/generate.cpp.obj: CMakeFiles/rush-hour.dir/flags.make
+CMakeFiles/rush-hour.dir/src/generate.cpp.obj: CMakeFiles/rush-hour.dir/includes_CXX.rsp
 CMakeFiles/rush-hour.dir/src/generate.cpp.obj: C:/Users/compteadmin/Desktop/projet/projet-rush-hour/src/generate.cpp
 CMakeFiles/rush-hour.dir/src/generate.cpp.obj: CMakeFiles/rush-hour.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\compteadmin\Desktop\projet\projet-rush-hour\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/rush-hour.dir/src/generate.cpp.obj"
-	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/rush-hour.dir/src/generate.cpp.obj -MF CMakeFiles\rush-hour.dir\src\generate.cpp.obj.d -o CMakeFiles\rush-hour.dir\src\generate.cpp.obj -c C:\Users\compteadmin\Desktop\projet\projet-rush-hour\src\generate.cpp
+	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/rush-hour.dir/src/generate.cpp.obj -MF CMakeFiles\rush-hour.dir\src\generate.cpp.obj.d -o CMakeFiles\rush-hour.dir\src\generate.cpp.obj -c C:\Users\compteadmin\Desktop\projet\projet-rush-hour\src\generate.cpp
 
 CMakeFiles/rush-hour.dir/src/generate.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/rush-hour.dir/src/generate.cpp.i"
-	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\compteadmin\Desktop\projet\projet-rush-hour\src\generate.cpp > CMakeFiles\rush-hour.dir\src\generate.cpp.i
+	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\compteadmin\Desktop\projet\projet-rush-hour\src\generate.cpp > CMakeFiles\rush-hour.dir\src\generate.cpp.i
 
 CMakeFiles/rush-hour.dir/src/generate.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/rush-hour.dir/src/generate.cpp.s"
-	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\compteadmin\Desktop\projet\projet-rush-hour\src\generate.cpp -o CMakeFiles\rush-hour.dir\src\generate.cpp.s
-
-CMakeFiles/rush-hour.dir/src/gennewplateau.cpp.obj: CMakeFiles/rush-hour.dir/flags.make
-CMakeFiles/rush-hour.dir/src/gennewplateau.cpp.obj: C:/Users/compteadmin/Desktop/projet/projet-rush-hour/src/gennewplateau.cpp
-CMakeFiles/rush-hour.dir/src/gennewplateau.cpp.obj: CMakeFiles/rush-hour.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\compteadmin\Desktop\projet\projet-rush-hour\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/rush-hour.dir/src/gennewplateau.cpp.obj"
-	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/rush-hour.dir/src/gennewplateau.cpp.obj -MF CMakeFiles\rush-hour.dir\src\gennewplateau.cpp.obj.d -o CMakeFiles\rush-hour.dir\src\gennewplateau.cpp.obj -c C:\Users\compteadmin\Desktop\projet\projet-rush-hour\src\gennewplateau.cpp
-
-CMakeFiles/rush-hour.dir/src/gennewplateau.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/rush-hour.dir/src/gennewplateau.cpp.i"
-	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\compteadmin\Desktop\projet\projet-rush-hour\src\gennewplateau.cpp > CMakeFiles\rush-hour.dir\src\gennewplateau.cpp.i
-
-CMakeFiles/rush-hour.dir/src/gennewplateau.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/rush-hour.dir/src/gennewplateau.cpp.s"
-	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\compteadmin\Desktop\projet\projet-rush-hour\src\gennewplateau.cpp -o CMakeFiles\rush-hour.dir\src\gennewplateau.cpp.s
+	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\compteadmin\Desktop\projet\projet-rush-hour\src\generate.cpp -o CMakeFiles\rush-hour.dir\src\generate.cpp.s
 
 CMakeFiles/rush-hour.dir/src/interface.cpp.obj: CMakeFiles/rush-hour.dir/flags.make
+CMakeFiles/rush-hour.dir/src/interface.cpp.obj: CMakeFiles/rush-hour.dir/includes_CXX.rsp
 CMakeFiles/rush-hour.dir/src/interface.cpp.obj: C:/Users/compteadmin/Desktop/projet/projet-rush-hour/src/interface.cpp
 CMakeFiles/rush-hour.dir/src/interface.cpp.obj: CMakeFiles/rush-hour.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\compteadmin\Desktop\projet\projet-rush-hour\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/rush-hour.dir/src/interface.cpp.obj"
-	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/rush-hour.dir/src/interface.cpp.obj -MF CMakeFiles\rush-hour.dir\src\interface.cpp.obj.d -o CMakeFiles\rush-hour.dir\src\interface.cpp.obj -c C:\Users\compteadmin\Desktop\projet\projet-rush-hour\src\interface.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\compteadmin\Desktop\projet\projet-rush-hour\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/rush-hour.dir/src/interface.cpp.obj"
+	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/rush-hour.dir/src/interface.cpp.obj -MF CMakeFiles\rush-hour.dir\src\interface.cpp.obj.d -o CMakeFiles\rush-hour.dir\src\interface.cpp.obj -c C:\Users\compteadmin\Desktop\projet\projet-rush-hour\src\interface.cpp
 
 CMakeFiles/rush-hour.dir/src/interface.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/rush-hour.dir/src/interface.cpp.i"
-	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\compteadmin\Desktop\projet\projet-rush-hour\src\interface.cpp > CMakeFiles\rush-hour.dir\src\interface.cpp.i
+	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\compteadmin\Desktop\projet\projet-rush-hour\src\interface.cpp > CMakeFiles\rush-hour.dir\src\interface.cpp.i
 
 CMakeFiles/rush-hour.dir/src/interface.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/rush-hour.dir/src/interface.cpp.s"
-	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\compteadmin\Desktop\projet\projet-rush-hour\src\interface.cpp -o CMakeFiles\rush-hour.dir\src\interface.cpp.s
+	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\compteadmin\Desktop\projet\projet-rush-hour\src\interface.cpp -o CMakeFiles\rush-hour.dir\src\interface.cpp.s
 
 CMakeFiles/rush-hour.dir/src/main.cpp.obj: CMakeFiles/rush-hour.dir/flags.make
+CMakeFiles/rush-hour.dir/src/main.cpp.obj: CMakeFiles/rush-hour.dir/includes_CXX.rsp
 CMakeFiles/rush-hour.dir/src/main.cpp.obj: C:/Users/compteadmin/Desktop/projet/projet-rush-hour/src/main.cpp
 CMakeFiles/rush-hour.dir/src/main.cpp.obj: CMakeFiles/rush-hour.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\compteadmin\Desktop\projet\projet-rush-hour\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/rush-hour.dir/src/main.cpp.obj"
-	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/rush-hour.dir/src/main.cpp.obj -MF CMakeFiles\rush-hour.dir\src\main.cpp.obj.d -o CMakeFiles\rush-hour.dir\src\main.cpp.obj -c C:\Users\compteadmin\Desktop\projet\projet-rush-hour\src\main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\compteadmin\Desktop\projet\projet-rush-hour\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/rush-hour.dir/src/main.cpp.obj"
+	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/rush-hour.dir/src/main.cpp.obj -MF CMakeFiles\rush-hour.dir\src\main.cpp.obj.d -o CMakeFiles\rush-hour.dir\src\main.cpp.obj -c C:\Users\compteadmin\Desktop\projet\projet-rush-hour\src\main.cpp
 
 CMakeFiles/rush-hour.dir/src/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/rush-hour.dir/src/main.cpp.i"
-	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\compteadmin\Desktop\projet\projet-rush-hour\src\main.cpp > CMakeFiles\rush-hour.dir\src\main.cpp.i
+	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\compteadmin\Desktop\projet\projet-rush-hour\src\main.cpp > CMakeFiles\rush-hour.dir\src\main.cpp.i
 
 CMakeFiles/rush-hour.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/rush-hour.dir/src/main.cpp.s"
-	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\compteadmin\Desktop\projet\projet-rush-hour\src\main.cpp -o CMakeFiles\rush-hour.dir\src\main.cpp.s
+	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\compteadmin\Desktop\projet\projet-rush-hour\src\main.cpp -o CMakeFiles\rush-hour.dir\src\main.cpp.s
 
 CMakeFiles/rush-hour.dir/src/move.cpp.obj: CMakeFiles/rush-hour.dir/flags.make
+CMakeFiles/rush-hour.dir/src/move.cpp.obj: CMakeFiles/rush-hour.dir/includes_CXX.rsp
 CMakeFiles/rush-hour.dir/src/move.cpp.obj: C:/Users/compteadmin/Desktop/projet/projet-rush-hour/src/move.cpp
 CMakeFiles/rush-hour.dir/src/move.cpp.obj: CMakeFiles/rush-hour.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\compteadmin\Desktop\projet\projet-rush-hour\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/rush-hour.dir/src/move.cpp.obj"
-	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/rush-hour.dir/src/move.cpp.obj -MF CMakeFiles\rush-hour.dir\src\move.cpp.obj.d -o CMakeFiles\rush-hour.dir\src\move.cpp.obj -c C:\Users\compteadmin\Desktop\projet\projet-rush-hour\src\move.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\compteadmin\Desktop\projet\projet-rush-hour\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/rush-hour.dir/src/move.cpp.obj"
+	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/rush-hour.dir/src/move.cpp.obj -MF CMakeFiles\rush-hour.dir\src\move.cpp.obj.d -o CMakeFiles\rush-hour.dir\src\move.cpp.obj -c C:\Users\compteadmin\Desktop\projet\projet-rush-hour\src\move.cpp
 
 CMakeFiles/rush-hour.dir/src/move.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/rush-hour.dir/src/move.cpp.i"
-	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\compteadmin\Desktop\projet\projet-rush-hour\src\move.cpp > CMakeFiles\rush-hour.dir\src\move.cpp.i
+	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\compteadmin\Desktop\projet\projet-rush-hour\src\move.cpp > CMakeFiles\rush-hour.dir\src\move.cpp.i
 
 CMakeFiles/rush-hour.dir/src/move.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/rush-hour.dir/src/move.cpp.s"
-	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\compteadmin\Desktop\projet\projet-rush-hour\src\move.cpp -o CMakeFiles\rush-hour.dir\src\move.cpp.s
+	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\compteadmin\Desktop\projet\projet-rush-hour\src\move.cpp -o CMakeFiles\rush-hour.dir\src\move.cpp.s
 
 CMakeFiles/rush-hour.dir/src/solve.cpp.obj: CMakeFiles/rush-hour.dir/flags.make
+CMakeFiles/rush-hour.dir/src/solve.cpp.obj: CMakeFiles/rush-hour.dir/includes_CXX.rsp
 CMakeFiles/rush-hour.dir/src/solve.cpp.obj: C:/Users/compteadmin/Desktop/projet/projet-rush-hour/src/solve.cpp
 CMakeFiles/rush-hour.dir/src/solve.cpp.obj: CMakeFiles/rush-hour.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\compteadmin\Desktop\projet\projet-rush-hour\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/rush-hour.dir/src/solve.cpp.obj"
-	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/rush-hour.dir/src/solve.cpp.obj -MF CMakeFiles\rush-hour.dir\src\solve.cpp.obj.d -o CMakeFiles\rush-hour.dir\src\solve.cpp.obj -c C:\Users\compteadmin\Desktop\projet\projet-rush-hour\src\solve.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\compteadmin\Desktop\projet\projet-rush-hour\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/rush-hour.dir/src/solve.cpp.obj"
+	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/rush-hour.dir/src/solve.cpp.obj -MF CMakeFiles\rush-hour.dir\src\solve.cpp.obj.d -o CMakeFiles\rush-hour.dir\src\solve.cpp.obj -c C:\Users\compteadmin\Desktop\projet\projet-rush-hour\src\solve.cpp
 
 CMakeFiles/rush-hour.dir/src/solve.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/rush-hour.dir/src/solve.cpp.i"
-	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\compteadmin\Desktop\projet\projet-rush-hour\src\solve.cpp > CMakeFiles\rush-hour.dir\src\solve.cpp.i
+	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\compteadmin\Desktop\projet\projet-rush-hour\src\solve.cpp > CMakeFiles\rush-hour.dir\src\solve.cpp.i
 
 CMakeFiles/rush-hour.dir/src/solve.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/rush-hour.dir/src/solve.cpp.s"
-	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\compteadmin\Desktop\projet\projet-rush-hour\src\solve.cpp -o CMakeFiles\rush-hour.dir\src\solve.cpp.s
+	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\compteadmin\Desktop\projet\projet-rush-hour\src\solve.cpp -o CMakeFiles\rush-hour.dir\src\solve.cpp.s
+
+CMakeFiles/rush-hour.dir/src/type.cpp.obj: CMakeFiles/rush-hour.dir/flags.make
+CMakeFiles/rush-hour.dir/src/type.cpp.obj: CMakeFiles/rush-hour.dir/includes_CXX.rsp
+CMakeFiles/rush-hour.dir/src/type.cpp.obj: C:/Users/compteadmin/Desktop/projet/projet-rush-hour/src/type.cpp
+CMakeFiles/rush-hour.dir/src/type.cpp.obj: CMakeFiles/rush-hour.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\compteadmin\Desktop\projet\projet-rush-hour\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/rush-hour.dir/src/type.cpp.obj"
+	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/rush-hour.dir/src/type.cpp.obj -MF CMakeFiles\rush-hour.dir\src\type.cpp.obj.d -o CMakeFiles\rush-hour.dir\src\type.cpp.obj -c C:\Users\compteadmin\Desktop\projet\projet-rush-hour\src\type.cpp
+
+CMakeFiles/rush-hour.dir/src/type.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/rush-hour.dir/src/type.cpp.i"
+	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\compteadmin\Desktop\projet\projet-rush-hour\src\type.cpp > CMakeFiles\rush-hour.dir\src\type.cpp.i
+
+CMakeFiles/rush-hour.dir/src/type.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/rush-hour.dir/src/type.cpp.s"
+	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\compteadmin\Desktop\projet\projet-rush-hour\src\type.cpp -o CMakeFiles\rush-hour.dir\src\type.cpp.s
 
 # Object files for target rush-hour
 rush__hour_OBJECTS = \
 "CMakeFiles/rush-hour.dir/src/generate.cpp.obj" \
-"CMakeFiles/rush-hour.dir/src/gennewplateau.cpp.obj" \
 "CMakeFiles/rush-hour.dir/src/interface.cpp.obj" \
 "CMakeFiles/rush-hour.dir/src/main.cpp.obj" \
 "CMakeFiles/rush-hour.dir/src/move.cpp.obj" \
-"CMakeFiles/rush-hour.dir/src/solve.cpp.obj"
+"CMakeFiles/rush-hour.dir/src/solve.cpp.obj" \
+"CMakeFiles/rush-hour.dir/src/type.cpp.obj"
 
 # External object files for target rush-hour
 rush__hour_EXTERNAL_OBJECTS =
 
 rush-hour.exe: CMakeFiles/rush-hour.dir/src/generate.cpp.obj
-rush-hour.exe: CMakeFiles/rush-hour.dir/src/gennewplateau.cpp.obj
 rush-hour.exe: CMakeFiles/rush-hour.dir/src/interface.cpp.obj
 rush-hour.exe: CMakeFiles/rush-hour.dir/src/main.cpp.obj
 rush-hour.exe: CMakeFiles/rush-hour.dir/src/move.cpp.obj
 rush-hour.exe: CMakeFiles/rush-hour.dir/src/solve.cpp.obj
+rush-hour.exe: CMakeFiles/rush-hour.dir/src/type.cpp.obj
 rush-hour.exe: CMakeFiles/rush-hour.dir/build.make
 rush-hour.exe: C:/msys64/ucrt64/lib/libsfml-graphics.dll.a
 rush-hour.exe: C:/msys64/ucrt64/lib/libsfml-window.dll.a

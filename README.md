@@ -1,13 +1,15 @@
 # projet-rush-hour
 
 ## installer SFML
-https://www.sfml-dev.org/download/sfml/2.5.0/ 
+https://www.sfml-dev.org/download/sfml/2.5.0/  
 
-## compilation + execution
+todo  = TOUT REFAIRE PUTAIN  
+
+## compilation + execution  
 cd .\build\  
 cmake ..\CMakeLists.txt -G "MinGW Makefiles"  
 cmake --build .  
-./rush-hour.out.exe  
+./rush-hour.exe  
 
 ## timeline
 

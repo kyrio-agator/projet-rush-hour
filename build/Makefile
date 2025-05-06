@@ -152,30 +152,6 @@ src/generate.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\rush-hour.dir\build.make CMakeFiles/rush-hour.dir/src/generate.cpp.s
 .PHONY : src/generate.cpp.s
 
-src/gennewplateau.obj: src/gennewplateau.cpp.obj
-.PHONY : src/gennewplateau.obj
-
-# target to build an object file
-src/gennewplateau.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\rush-hour.dir\build.make CMakeFiles/rush-hour.dir/src/gennewplateau.cpp.obj
-.PHONY : src/gennewplateau.cpp.obj
-
-src/gennewplateau.i: src/gennewplateau.cpp.i
-.PHONY : src/gennewplateau.i
-
-# target to preprocess a source file
-src/gennewplateau.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\rush-hour.dir\build.make CMakeFiles/rush-hour.dir/src/gennewplateau.cpp.i
-.PHONY : src/gennewplateau.cpp.i
-
-src/gennewplateau.s: src/gennewplateau.cpp.s
-.PHONY : src/gennewplateau.s
-
-# target to generate assembly for a file
-src/gennewplateau.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\rush-hour.dir\build.make CMakeFiles/rush-hour.dir/src/gennewplateau.cpp.s
-.PHONY : src/gennewplateau.cpp.s
-
 src/interface.obj: src/interface.cpp.obj
 .PHONY : src/interface.obj
 
@@ -272,6 +248,30 @@ src/solve.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\rush-hour.dir\build.make CMakeFiles/rush-hour.dir/src/solve.cpp.s
 .PHONY : src/solve.cpp.s
 
+src/type.obj: src/type.cpp.obj
+.PHONY : src/type.obj
+
+# target to build an object file
+src/type.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\rush-hour.dir\build.make CMakeFiles/rush-hour.dir/src/type.cpp.obj
+.PHONY : src/type.cpp.obj
+
+src/type.i: src/type.cpp.i
+.PHONY : src/type.i
+
+# target to preprocess a source file
+src/type.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\rush-hour.dir\build.make CMakeFiles/rush-hour.dir/src/type.cpp.i
+.PHONY : src/type.cpp.i
+
+src/type.s: src/type.cpp.s
+.PHONY : src/type.s
+
+# target to generate assembly for a file
+src/type.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\rush-hour.dir\build.make CMakeFiles/rush-hour.dir/src/type.cpp.s
+.PHONY : src/type.cpp.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -284,9 +284,6 @@ help:
 	@echo ... src/generate.obj
 	@echo ... src/generate.i
 	@echo ... src/generate.s
-	@echo ... src/gennewplateau.obj
-	@echo ... src/gennewplateau.i
-	@echo ... src/gennewplateau.s
 	@echo ... src/interface.obj
 	@echo ... src/interface.i
 	@echo ... src/interface.s
@@ -299,6 +296,9 @@ help:
 	@echo ... src/solve.obj
 	@echo ... src/solve.i
 	@echo ... src/solve.s
+	@echo ... src/type.obj
+	@echo ... src/type.i
+	@echo ... src/type.s
 .PHONY : help
 
 

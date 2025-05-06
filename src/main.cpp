@@ -1,21 +1,20 @@
 #include "generate.h"
-#include "gennewplateau.h"
 #include "interface.h"
 #include "move.h"
 #include "solve.h"
-
-using grid=char**;
+#include "type.h"
 
 int main(){
-    sf::RenderWindow window(sf::VideoMode(600, 600), "Grid Viewer");
+    sf::RenderWindow window(sf::VideoMode(600, 600), "rush-hour");
 
-    std::string l="../plateau/plateau1.txt";
-    int s=getsizeplateau(l);
-    grid plateau=lirePlateau(l,s);
-    char vo='X';char di=' ';
+    std::string l="../plateau/plateau2.json";
+
+    sgrid plateau=lirePlateauJson(l);
+    char vo=plateau.v_dep;
+    char di=' ';
 
     while (window.isOpen()) {
-        interfaceSFML(window, plateau, s,vo);
+        interfaceSFML(window,plateau,vo);
 
         sf::Event event;
         while(window.pollEvent(event)){
@@ -23,8 +22,9 @@ int main(){
             if((event.type==sf::Event::MouseButtonPressed)and(event.mouseButton.button==sf::Mouse::Left)){
                 sf::Vector2i mousePos=sf::Mouse::getPosition(window);
                 int x=mousePos.x;  int y=mousePos.y;
-                int cellsize=window.getSize().x/s;
-                vo=plateau[y/cellsize][x/cellsize];
+                int cellSizeX = window.getSize().x / plateau.taille[1];
+                int cellSizeY = window.getSize().y / plateau.taille[0];
+                vo=plateau.val[y/cellSizeX][x/cellSizeY];
             }
             if(event.type==sf::Event::KeyPressed){
                 switch(event.key.code){
@@ -47,41 +47,14 @@ int main(){
         }
 
         if(di!=' '){
-            deplace(plateau,s,vo,di);
+            deplace(plateau,vo,di);
             di=' ';
         }
-
-        if(victoire(plateau,s)or(di=='v')){
+        if(victoire(plateau)or(di=='v')){
             std::cout<<"gagne";
             window.close();}
         sf::sleep(sf::milliseconds(200));
     }
-    delete2Darray(plateau,s);
-    
-    /*
-    std::cout<<"skill issue"<<std::endl;
-    sf::RenderWindow window(sf::VideoMode(600, 600), "rush-hour");
 
-    std::string l="../plateau/plateau1.txt";
-
-    int s=getsizeplateau(l);
-    grid plateau=lirePlateau(l,s);
-    affiche(plateau,s);
-
-    char vo=' ';char di=' ';
-    //boucle de jeu
-    while(di!='v'){
-        std::cout<<"----------------"<<std::endl<<"symbole de voiture + b/h/d/g"<<std::endl;
-
-        std::cin>>vo>>di;
-        deplace(plateau,s,vo,di);
-        changeTheGridSFML()
-        if(victoire(plateau,s)){di='v';}
-    }
-
-    std::cout<<std::endl<<"gagne";
-
-    delete2Darray(plateau,s);
-*/
-    return 0;
+    delete2Darray(plateau);
 }

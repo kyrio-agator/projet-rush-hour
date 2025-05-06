@@ -1,11 +1,12 @@
 #pragma once
 
-#include <array>
+#include "type.h"
+
 #include <string>
 #include <fstream>
-#include <iostream>
+#include "../include/json.hpp"
+using json = nlohmann::json;
 
-char** initialisePlateau(int s);
-void delete2Darray(char** grid,int s);
-int getsizeplateau(std::string l);
-char** lirePlateau(std::string l,int s);
+grid initialisePlateau(int width, int height);
+void delete2Darray(sgrid grid);
+sgrid lirePlateauJson(std::string l);
