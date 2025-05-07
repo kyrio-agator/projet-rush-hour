@@ -4,7 +4,9 @@ project(rush-hour)
 add_compile_options(-Wall)
 
 find_package(SFML COMPONENTS graphics window system)
+
 include_directories(${CMAKE_SOURCE_DIR}/include)
+link_directories(C:\\SFML-2.5.0\\lib)
 
 add_executable(${PROJECT_NAME}
     src/generate.cpp
