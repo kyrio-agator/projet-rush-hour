@@ -28,7 +28,7 @@ int main(){
                 int x=mousePos.x;  int y=mousePos.y;
                 int cellSizeX = window.getSize().x / plateau.taille[1];
                 int cellSizeY = window.getSize().y / plateau.taille[0];
-                vo=plateau.val[y/cellSizeX][x/cellSizeY];
+                vo=plateau.val[y/cellSizeY][x/cellSizeX];
             }
             if(event.type==sf::Event::KeyPressed){
                 switch(event.key.code){

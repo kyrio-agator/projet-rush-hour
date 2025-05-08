@@ -3,7 +3,8 @@
 ## installer SFML
 https://www.sfml-dev.org/download/sfml/2.5.0/  
 
-todo  = TOUT REFAIRE PUTAIN  
+**depuis minGW:**  
+pacman -S mingw-w64-x86_64-sfml
 
 ## compilation + execution  
 cd .\build\  

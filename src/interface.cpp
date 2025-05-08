@@ -62,12 +62,11 @@ void interfaceSFML(sf::RenderWindow &window, sgrid plateau,str vo) {
     circle.setFillColor(sf::Color::Black);
 
     // Position the circle at center of the (cx, cy) cell
-    float posX = plateau.fin[0] * cellSizeX + cellSizeX / 2.0f - radius;
-    float posY = plateau.fin[1] * cellSizeY + cellSizeY / 2.0f - radius;
+    float posX = plateau.fin[0] * cellSizeX + cellSizeX / 2.0 - radius;
+    float posY = plateau.fin[1] * cellSizeY + cellSizeY / 2.0 - radius;
     circle.setPosition(posX, posY);
 
     window.draw(circle);
-
 
     window.display();
 }
