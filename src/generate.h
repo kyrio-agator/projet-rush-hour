@@ -3,7 +3,7 @@
 #include "type.h"
 
 #include <fstream>
-#include "../include/json/json.hpp"
+#include "../include/json.hpp"
 using json = nlohmann::json;
 
 grid initialisePlateau(int width, int height);

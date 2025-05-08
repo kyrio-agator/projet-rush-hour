@@ -2,7 +2,7 @@
 
 #include <filesystem>
 #include <fstream>
-#include "../include/json/json.hpp"
+#include "../include/json.hpp"
 using json = nlohmann::json;
 namespace fs =std::filesystem;
 

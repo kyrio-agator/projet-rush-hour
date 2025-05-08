@@ -3,7 +3,7 @@
 
 
 
-grid initialisePlateau(int width, int height){  //s = size
+grid initialisePlateau(int width, int height){
     //generate
     grid plateau = new std::string* [height];
 
