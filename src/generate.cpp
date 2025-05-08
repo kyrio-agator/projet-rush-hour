@@ -5,13 +5,13 @@
 
 grid initialisePlateau(int width, int height){  //s = size
     //generate
-    grid plateau = new char*[height];
+    grid plateau = new std::string* [height];
 
     for(int i=0;i<height;i++){
-        plateau[i]=new char[width];
+        plateau[i]=new std::string[width];
     }
 
-    //fill with ' '
+    //fill with empty
     for(int i=0;i<height;i++){
         for(int j=0;j<width;j++){
             plateau[i][j]=emptychr;
@@ -28,12 +28,12 @@ void delete2Darray(sgrid plateau){
     delete[] plateau.val;
 }
 
-sgrid lirePlateauJson(std::string path) {
-    std::ifstream ifs(path.c_str());
+sgrid lirePlateauJson(str l) {
+    std::ifstream ifs(l.c_str());
     sgrid plateau;
 
     if (!ifs) {
-        std::cerr << "Erreur: impossible d'ouvrir le fichier JSON: " << path << std::endl;
+        std::cerr << "Erreur: impossible d'ouvrir le fichier JSON: " << l << std::endl;
         plateau.val = nullptr;
         return plateau;
     }
@@ -42,7 +42,7 @@ sgrid lirePlateauJson(std::string path) {
     ifs >> j;
 
     // Lecture des champs de base
-    plateau.nom = j["nom"].get<std::string>();
+    plateau.nom = j["nom"].get<str>();
     plateau.niv = j["niveau"].get<int>();
 
     int largeur = j["largeur"].get<int>();
@@ -59,12 +59,12 @@ sgrid lirePlateauJson(std::string path) {
     // Placement des voitures classiques
     for (json::iterator it = j["voitures"].begin(); it != j["voitures"].end(); ++it) {
 
-        char id = (*it)["id"].get<std::string>()[0];
+        str id = (*it)["id"].get<str>();
         int x = (*it)["x"].get<int>() - 1;
         int y = (*it)["y"].get<int>() - 1;
         int taille = (*it)["taille"].get<int>();
 
-        std::string ori = (*it)["orientation"].get<std::string>();
+        str ori = (*it)["orientation"].get<str>();
         if (ori == "horizontale") {
             for (int dx = 0; dx < taille; ++dx) {
                 plateau.val[y][x + dx] = id;
@@ -79,12 +79,12 @@ sgrid lirePlateauJson(std::string path) {
 
     // Placement de la voiture de départ
     json vd = j["voiture_dep"];
-    plateau.v_dep = vd["id"].get<std::string>()[0];
+    plateau.v_dep = vd["id"].get<str>();
     int x0 = vd["x_dep"].get<int>() - 1;
     int y0 = vd["y_dep"].get<int>() - 1;
     int t0 = vd["taille_dep"].get<int>();
 
-    std::string ori0 = vd["orientation_dep"].get<std::string>();
+    str ori0 = vd["orientation_dep"].get<str>();
     if (ori0 == "horizontale") {
         for (int dx = 0; dx < t0; ++dx) {
             plateau.val[y0][x0 + dx] = plateau.v_dep;

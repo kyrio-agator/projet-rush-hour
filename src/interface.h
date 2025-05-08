@@ -7,5 +7,5 @@
 #include <SFML/System.hpp>
 
 void interfaceText(sgrid plateau);
-void interfaceSFML(sf::RenderWindow &window,sgrid plateau,char vo);
-sf::Color charToColor(char c);
+void interfaceSFML(sf::RenderWindow &window,sgrid plateau,str vo);
+sf::Color charToColor(str c);

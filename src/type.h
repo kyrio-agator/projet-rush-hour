@@ -2,17 +2,18 @@
 
 #include <array>
 #include <iostream>
+#include <string>
 
-
-using grid=char**;
+using str=std::string;
+using grid=str**;
 using ui=unsigned int;
 using coord=std::array<int,2>;
-const char emptychr='-';
+const str emptychr="-";
 
 struct sgrid{
-    std::string nom;
+    str nom;
     int niv;
-    char v_dep;
+    str v_dep;
     coord taille;
     coord fin;
     grid val;

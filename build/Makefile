@@ -47,19 +47,19 @@ cmake_force:
 SHELL = cmd.exe
 
 # The CMake executable.
-CMAKE_COMMAND = "C:\Program Files (x86)\cmake-4.0.1-windows-x86_64\cmake-4.0.1-windows-x86_64\bin\cmake.exe"
+CMAKE_COMMAND = "C:\Program Files\CMake\bin\cmake.exe"
 
 # The command to remove a file.
-RM = "C:\Program Files (x86)\cmake-4.0.1-windows-x86_64\cmake-4.0.1-windows-x86_64\bin\cmake.exe" -E rm -f
+RM = "C:\Program Files\CMake\bin\cmake.exe" -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\kyrio\Desktop\projet\projet-rush-hour
+CMAKE_SOURCE_DIR = C:\Users\compteadmin\Desktop\projet\projet-rush-hour
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\kyrio\Desktop\projet\projet-rush-hour\build
+CMAKE_BINARY_DIR = C:\Users\compteadmin\Desktop\projet\projet-rush-hour\build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -67,7 +67,7 @@ CMAKE_BINARY_DIR = C:\Users\kyrio\Desktop\projet\projet-rush-hour\build
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Running CMake cache editor..."
-	"C:\Program Files (x86)\cmake-4.0.1-windows-x86_64\cmake-4.0.1-windows-x86_64\bin\cmake-gui.exe" -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	"C:\Program Files\CMake\bin\cmake-gui.exe" -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -77,7 +77,7 @@ edit_cache/fast: edit_cache
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Running CMake to regenerate build system..."
-	"C:\Program Files (x86)\cmake-4.0.1-windows-x86_64\cmake-4.0.1-windows-x86_64\bin\cmake.exe" --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	"C:\Program Files\CMake\bin\cmake.exe" --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -86,9 +86,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\kyrio\Desktop\projet\projet-rush-hour\build\CMakeFiles C:\Users\kyrio\Desktop\projet\projet-rush-hour\build\\CMakeFiles\progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\compteadmin\Desktop\projet\projet-rush-hour\build\CMakeFiles C:\Users\compteadmin\Desktop\projet\projet-rush-hour\build\\CMakeFiles\progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\kyrio\Desktop\projet\projet-rush-hour\build\CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\compteadmin\Desktop\projet\projet-rush-hour\build\CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -224,6 +224,30 @@ src/move.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\rush-hour.dir\build.make CMakeFiles/rush-hour.dir/src/move.cpp.s
 .PHONY : src/move.cpp.s
 
+src/selection.obj: src/selection.cpp.obj
+.PHONY : src/selection.obj
+
+# target to build an object file
+src/selection.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\rush-hour.dir\build.make CMakeFiles/rush-hour.dir/src/selection.cpp.obj
+.PHONY : src/selection.cpp.obj
+
+src/selection.i: src/selection.cpp.i
+.PHONY : src/selection.i
+
+# target to preprocess a source file
+src/selection.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\rush-hour.dir\build.make CMakeFiles/rush-hour.dir/src/selection.cpp.i
+.PHONY : src/selection.cpp.i
+
+src/selection.s: src/selection.cpp.s
+.PHONY : src/selection.s
+
+# target to generate assembly for a file
+src/selection.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\rush-hour.dir\build.make CMakeFiles/rush-hour.dir/src/selection.cpp.s
+.PHONY : src/selection.cpp.s
+
 src/solve.obj: src/solve.cpp.obj
 .PHONY : src/solve.obj
 
@@ -293,6 +317,9 @@ help:
 	@echo ... src/move.obj
 	@echo ... src/move.i
 	@echo ... src/move.s
+	@echo ... src/selection.obj
+	@echo ... src/selection.i
+	@echo ... src/selection.s
 	@echo ... src/solve.obj
 	@echo ... src/solve.i
 	@echo ... src/solve.s

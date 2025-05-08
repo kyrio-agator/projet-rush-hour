@@ -1,6 +1,6 @@
 #include "move.h"
 
-bool exist(sgrid plateau,char c){
+bool exist(sgrid plateau,str c){
     bool v=false;
     for(int i=0;i<plateau.taille[0];i++){
         for(int j=0;j<plateau.taille[1];j++){
@@ -15,7 +15,7 @@ bool victoire(sgrid plateau){
     return plateau.val[x][y]==plateau.v_dep;
 }
 
-bool horizontal(sgrid plateau,char c){
+bool horizontal(sgrid plateau,str c){
     bool v=false;
     for(int i=0;i<plateau.taille[0];i++){
         for(int j=0;j<plateau.taille[1]-1;j++){
@@ -25,7 +25,7 @@ bool horizontal(sgrid plateau,char c){
     return v;
 }
 
-int getsizecar(sgrid plateau,char c){
+int getsizecar(sgrid plateau,str c){
     int t=0;
     for(int i=0;i<plateau.taille[0];i++){
         for(int j=0;j<plateau.taille[1];j++){
@@ -35,7 +35,7 @@ int getsizecar(sgrid plateau,char c){
     return t;
 }
 
-void deplace(sgrid &plateau,char c,char dir){
+void deplace(sgrid &plateau,str c,char dir){
     if(exist(plateau,c)){
         int taille_v=getsizecar(plateau,c);
         coord* v=new coord[taille_v];

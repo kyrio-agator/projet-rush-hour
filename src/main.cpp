@@ -3,19 +3,23 @@
 #include "move.h"
 #include "solve.h"
 #include "type.h"
+#include "selection.h"
+
 
 int main(){
+
+    str l=selectJson("../plateau");
+    if(l!=""){
+
     sf::RenderWindow window(sf::VideoMode(600, 600), "rush-hour");
 
-    std::string l="../plateau/plateau2.json";
 
     sgrid plateau=lirePlateauJson(l);
-    char vo=plateau.v_dep;
+    str vo=plateau.v_dep;
     char di=' ';
 
     while (window.isOpen()) {
         interfaceSFML(window,plateau,vo);
-
         sf::Event event;
         while(window.pollEvent(event)){
             if(event.type==sf::Event::Closed){window.close();}
@@ -55,6 +59,6 @@ int main(){
             window.close();}
         sf::sleep(sf::milliseconds(200));
     }
-
     delete2Darray(plateau);
+    }
 }

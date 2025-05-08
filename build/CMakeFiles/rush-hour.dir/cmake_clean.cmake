@@ -7,6 +7,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/rush-hour.dir/src/main.cpp.obj.d"
   "CMakeFiles/rush-hour.dir/src/move.cpp.obj"
   "CMakeFiles/rush-hour.dir/src/move.cpp.obj.d"
+  "CMakeFiles/rush-hour.dir/src/selection.cpp.obj"
+  "CMakeFiles/rush-hour.dir/src/selection.cpp.obj.d"
   "CMakeFiles/rush-hour.dir/src/solve.cpp.obj"
   "CMakeFiles/rush-hour.dir/src/solve.cpp.obj.d"
   "CMakeFiles/rush-hour.dir/src/type.cpp.obj"

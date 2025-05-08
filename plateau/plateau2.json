@@ -13,5 +13,5 @@
         {"id":"G","x": 3, "y": 6, "taille": 2, "orientation" : "horizontale" }
     ],
     "voiture_dep": {"id":"X","x_dep": 1, "y_dep": 3, "taille_dep": 2, "orientation_dep": "horizontale"},
-    "sortie" : {"x_sortie" : 6, "y_sortie": 1}
+    "sortie" : {"x_sortie" : 6, "y_sortie": 3}
     }

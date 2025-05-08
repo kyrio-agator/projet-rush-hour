@@ -18,19 +18,19 @@ void interfaceText(sgrid plateau){
     }
 }
 
-sf::Color charToColor(char c) {
-    if(c=='X'){return sf::Color::Red;}
-    if(c=='A'){return sf::Color::Blue;}
-    if(c=='B'){return sf::Color::Green;}
-    if(c=='C'){return sf::Color::Yellow;}
-    if(c=='D'){return sf::Color::Magenta;}
-    if(c=='E'){return sf::Color::Cyan;}
-    if(c=='F'){return sf::Color(139,69,19);}
-    if(c=='G'){return sf::Color(200,200,200);}
+sf::Color idToColor(str c) {
+    if(c=="X"){return sf::Color::Red;}
+    if(c=="A"){return sf::Color::Blue;}
+    if(c=="B"){return sf::Color::Green;}
+    if(c=="C"){return sf::Color::Yellow;}
+    if(c=="D"){return sf::Color::Magenta;}
+    if(c=="E"){return sf::Color::Cyan;}
+    if(c=="F"){return sf::Color(139,69,19);}
+    if(c=="G"){return sf::Color(200,200,200);}
     else{return sf::Color::White;}
 }
 
-void interfaceSFML(sf::RenderWindow &window, sgrid plateau,char vo) {
+void interfaceSFML(sf::RenderWindow &window, sgrid plateau,str vo) {
     float cellSizeX = window.getSize().x / plateau.taille[1];
     float cellSizeY = window.getSize().y / plateau.taille[0];
 
@@ -43,12 +43,12 @@ void interfaceSFML(sf::RenderWindow &window, sgrid plateau,char vo) {
             sf::RectangleShape cell(sf::Vector2f(cellSizeX,cellSizeY));
             cell.setPosition(j * cellSizeX, i * cellSizeY);
 
-            char currentChar = plateau.val[i][j];
+            str currentCar = plateau.val[i][j];
 
-            if (currentChar == emptychr) {cell.setFillColor(sf::Color(128, 128, 128));}
+            if (currentCar == emptychr) {cell.setFillColor(sf::Color(128, 128, 128));}
             else{
-                cell.setFillColor(charToColor(currentChar));
-                if(currentChar==vo){
+                cell.setFillColor(idToColor(currentCar));
+                if(currentCar==vo){
                     cell.setOutlineColor(sf::Color::Black);
                     cell.setOutlineThickness(1.0f);
                     }
