@@ -6,6 +6,10 @@ https://www.sfml-dev.org/download/sfml/2.5.0/
 **depuis minGW:**  
 pacman -S mingw-w64-x86_64-sfml
 
+## source librairie json  
+https://github.com/nlohmann/json
+
+
 ## compilation + execution  
 cd .\build\  
 cmake ..\CMakeLists.txt -G "MinGW Makefiles"  
