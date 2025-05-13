@@ -1,13 +1,10 @@
 #include "move.h"
 
 bool exist(sgrid plateau,str c){
-    bool v=false;
-    for(int i=0;i<plateau.taille[0];i++){
-        for(int j=0;j<plateau.taille[1];j++){
-            if(plateau.val[i][j]==c){v=true;}
-        }
+    for(int i=0;i<plateau.nb_voit;i++){
+        if(plateau.v[i].id==c){return true;}
     }
-    return v;
+    return false;
 }
 
 bool victoire(sgrid plateau){
@@ -16,23 +13,17 @@ bool victoire(sgrid plateau){
 }
 
 bool horizontal(sgrid plateau,str c){
-    bool v=false;
-    for(int i=0;i<plateau.taille[0];i++){
-        for(int j=0;j<plateau.taille[1]-1;j++){
-            if( (plateau.val[i][j]==c) && (plateau.val[i][j+1]==c) ){v=true;}
-        }
+    for(int i=0;i<plateau.nb_voit;i++){
+        if((plateau.v[i].id==c)and(plateau.v[i].ori=="horizontale")){return true;}
     }
-    return v;
+    return false;
 }
 
 int getsizecar(sgrid plateau,str c){
-    int t=0;
-    for(int i=0;i<plateau.taille[0];i++){
-        for(int j=0;j<plateau.taille[1];j++){
-            if(plateau.val[i][j]==c){t++;}
-        }
+    for(int i=0;i<plateau.nb_voit;i++){
+        if(plateau.v[i].id==c){return plateau.v[i].taille;}
     }
-    return t;
+    return 0;
 }
 
 void deplace(sgrid &plateau,str c,char dir){
@@ -50,6 +41,7 @@ void deplace(sgrid &plateau,str c,char dir){
                 }
             }
         }
+        
         if(horizontal(plateau,c)){
             //deplacement horizontal
             if(dir=='d'){

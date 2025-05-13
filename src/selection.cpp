@@ -10,19 +10,17 @@ str selectJson(str plt_dir) {
         if (entry.path().extension() == ".json" && count < 100) {
             str fullPath = entry.path().string();
             std::ifstream file(fullPath);
-            if (!file) continue;
+            if (!file){continue;}
 
             json j;
 
             file >> j;
             str nom = j["nom"];
-            int niveau = j["niveau"];
             int largeur = j["largeur"];
             int hauteur = j["hauteur"];
 
             files[count] = entry.path().filename().string();
             std::cout << (count + 1) << ". " << nom
-                      << " | Niveau: " << niveau
                       << " | " << largeur << "x" << hauteur << "\n";
             count++;
         }

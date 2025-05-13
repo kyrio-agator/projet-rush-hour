@@ -4,7 +4,6 @@
 void interfaceText(sgrid plateau){
     std::cout<<std::endl;
     std::cout << "Nom: " << plateau.nom <<std::endl;
-    std::cout << "niveau: " << plateau.niv << std::endl;
     std::cout << "Taille: " << plateau.taille[0] << " x " << plateau.taille[1] << std::endl;
     std::cout << "Voiture de depart: " << plateau.v_dep << std::endl;
     std::cout << "Sortie: (" << plateau.fin[0] << ", " << plateau.fin[1] << ")"<<std::endl;
@@ -18,16 +17,32 @@ void interfaceText(sgrid plateau){
     }
 }
 
-sf::Color idToColor(str c) {
-    if(c==emptychr){return sf::Color(128, 128, 128);}
-    if(c=="X"){return sf::Color::Red;}
-    if(c=="A"){return sf::Color::Blue;}
-    if(c=="B"){return sf::Color::Green;}
-    if(c=="C"){return sf::Color::Yellow;}
-    if(c=="D"){return sf::Color::Magenta;}
-    if(c=="E"){return sf::Color::Cyan;}
-    if(c=="F"){return sf::Color(139,69,19);}
-    if(c=="G"){return sf::Color(200,200,200);}
+sf::Color idToColor(str id) {
+    
+/*
+if(rvb)
+    extrait rvb
+    int r,g,b;
+    return rvb
+else if( couleur = rouge){return sf::rouge}
+else if( couleur = rouge){return sf::rouge}
+else if( couleur = rouge){return sf::rouge}
+else if( couleur = rouge){return sf::rouge}
+else if( couleur = rouge){return sf::rouge}
+else if( couleur = rouge){return sf::rouge}
+
+else return white
+
+*/
+    if(id==emptychr){return sf::Color(128, 128, 128);}
+    if(id=="X"){return sf::Color::Red;}
+    if(id=="A"){return sf::Color::Blue;}
+    if(id=="B"){return sf::Color::Green;}
+    if(id=="C"){return sf::Color::Yellow;}
+    if(id=="D"){return sf::Color::Magenta;}
+    if(id=="E"){return sf::Color::Cyan;}
+    if(id=="F"){return sf::Color(139,69,19);}
+    if(id=="G"){return sf::Color(200,200,200);}
     else{return sf::Color::White;}
 }
 

@@ -1,24 +1,23 @@
 {
     "nom": "Plateau 4",
-    "niveau": 4,
     "largeur": 9,
     "hauteur": 8,
     "voitures": [ 
-        {"id":"A","x": 1, "y": 1, "taille": 2, "orientation" : "verticale" }, 
-        {"id":"B","x": 1, "y": 4, "taille": 2, "orientation" : "horizontale" },
-        {"id":"C","x": 2, "y": 5, "taille": 3, "orientation" : "verticale" },
-        {"id":"D","x": 3, "y": 2, "taille": 2, "orientation" : "verticale" },
-        {"id":"E","x": 4, "y": 1, "taille": 3, "orientation" : "verticale" },
-        {"id":"F","x": 3, "y": 4, "taille": 2, "orientation" : "horizontale" },
-        {"id":"G","x": 4, "y": 5, "taille": 2, "orientation" : "horizontale" },
-        {"id":"H","x": 4, "y": 6, "taille": 3, "orientation" : "horizontale" },
-        {"id":"I","x": 5, "y": 2, "taille": 3, "orientation" : "horizontale" },
-        {"id":"J","x": 5, "y": 3, "taille": 2, "orientation" : "verticale" },
-        {"id":"K","x": 6, "y": 3, "taille": 2, "orientation" : "verticale" },
-        {"id":"L","x": 8, "y": 1, "taille": 3, "orientation" : "verticale" },
-        {"id":"M","x": 6, "y": 5, "taille": 3, "orientation" : "horizontale" },
-        {"id":"N","x": 5, "y": 1, "taille": 2, "orientation" : "horizontale" }
+        {"id":"A", "couleur" : "rvb(0, 255, 0)", "x": 1, "y": 1, "taille": 2, "orientation" : "verticale" }, 
+        {"id":"B", "couleur" : "rvb(0, 0, 255)", "x": 1, "y": 4, "taille": 2, "orientation" : "horizontale" },
+        {"id":"C", "couleur" : "rvb(255, 128, 0)", "x": 2, "y": 5, "taille": 3, "orientation" : "verticale" },
+        {"id":"D", "couleur" : "rvb(255, 105, 180)", "x": 3, "y": 2, "taille": 2, "orientation" : "verticale" },
+        {"id":"E", "couleur" : "rvb(157, 113, 83", "x": 4, "y": 1, "taille": 3, "orientation" : "verticale" },
+        {"id":"F", "couleur" : "rvb(238, 130, 238)", "x": 3, "y": 4, "taille": 2, "orientation" : "horizontale" },
+        {"id":"G", "couleur" : "rvb(43, 255, 255)", "x": 4, "y": 5, "taille": 2, "orientation" : "horizontale" },
+        {"id":"H", "couleur" : "rvb(255, 0, 255)", "x": 4, "y": 6, "taille": 3, "orientation" : "horizontale" },
+        {"id":"I", "couleur" : "rvb(0, 0, 255)", "x": 5, "y": 2, "taille": 3, "orientation" : "horizontale" },
+        {"id":"J", "couleur" : "rvb(238, 130, 238)", "x": 5, "y": 3, "taille": 2, "orientation" : "verticale" },
+        {"id":"K", "couleur" : "rvb(43, 255, 255)", "x": 6, "y": 3, "taille": 2, "orientation" : "verticale" },
+        {"id":"L", "couleur" : "rvb(0, 255, 0)", "x": 8, "y": 1, "taille": 3, "orientation" : "verticale" },
+        {"id":"M", "couleur" : "rvb(255, 0, 255)", "x": 6, "y": 5, "taille": 3, "orientation" : "horizontale" },
+        {"id":"N", "couleur" : "rvb(255, 105, 180)", "x": 5, "y": 1, "taille": 2, "orientation" : "horizontale" }
     ],
-    "voiture_dep": {"id":"X","x_dep": 1, "y_dep": 3, "taille_dep": 2, "orientation_dep": "horizontale"},
-    "sortie" : {"x_sortie" : 9, "y_sortie": 3}
+    "voiture_dep": {"id":"X", "couleur" : "rvb(255, 0, 0)", "x": 1, "y": 3, "taille": 2, "orientation": "horizontale"},
+    "sortie" : {"x" : 10, "y": 3}
     }

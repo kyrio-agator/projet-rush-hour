@@ -18,6 +18,12 @@ cmake --build .
 
 ## timeline
 
+enlevé le tag niveau
+mettre un tag couleur    rvb(r,g,b)  ou  str couleur
+voiture_dep { x ,y,taille,ori}
+sortie{x,y} sortie en dehors du plateau
+
+
 **s1**  
 ✓ minimum jouable (pas interface graph)  
 ✓ definir le formal de plateau  
