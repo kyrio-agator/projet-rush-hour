@@ -9,21 +9,24 @@
 int main(){
     std::srand(std::time(nullptr));
 
-    
     str l=selectJson("../plateau");
-    int AIstep=0;std::array<str,2> AIaction;
+
+        str reponceIA =" "; bool AIsolve=false; int frameTime=100; int AIstep=0; std::array<str,2> AIaction;
+        std::cout<<"utilise l'IA ?[y/n]: ";std::cin>>reponceIA;
+
+        if(reponceIA=="y"){
+            AIsolve=true;
+            frameTime=10;}
+
     if(l!=""){
         sf::RenderWindow window(sf::VideoMode(600, 600), "rush-hour");
 
         sgrid plateau=lirePlateauJson(l);
-        str vo=plateau.v_dep;
-        char di=' ';
-        bool AIsolve=true;
-
-        //afficherSgrid(plateau);
+        str vo=plateau.v_dep;char di=' ';
 
         while (window.isOpen()) {
             interfaceSFML(window,plateau,vo);
+
 
             sf::Event event;
             while(window.pollEvent(event)){
@@ -35,7 +38,7 @@ int main(){
                         int x=mousePos.x;  int y=mousePos.y;
                         int cellSizeX = window.getSize().x / plateau.taille[1];
                         int cellSizeY = window.getSize().y / plateau.taille[0];
-                        if(plateau.val[y/cellSizeY][x/cellSizeX]!=emptychr){
+                        if((plateau.val[y/cellSizeY][x/cellSizeX]!=emptychr)and(plateau.val[y/cellSizeY][x/cellSizeX]!=borderchr)){
                             vo=plateau.val[y/cellSizeY][x/cellSizeX];}
                     }
                     if(event.type==sf::Event::KeyPressed){
@@ -74,10 +77,11 @@ int main(){
             if(victoire(plateau)or(di=='v')){
                 std::cout<<"gagne"<<std::endl;
                 window.close();}
-            sf::sleep(sf::milliseconds(10));
+            
+            
+            sf::sleep(sf::milliseconds(frameTime));
         }
     delete2Darray(plateau);
     std::cout<<AIstep;
     }
-
 }

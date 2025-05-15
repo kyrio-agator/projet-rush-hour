@@ -8,13 +8,13 @@ bool exist(sgrid plateau,str c){
 }
 
 bool victoire(sgrid plateau){
-    int y=plateau.fin[0];int x=plateau.fin[1];
+    int x=plateau.fin[0];int y=plateau.fin[1];
     return plateau.val[x][y]==plateau.v_dep;
 }
 
 bool horizontal(sgrid plateau,str c){
     for(int i=0;i<plateau.nb_voit;i++){
-        if((plateau.v[i].id==c)and(plateau.v[i].ori=="horizontale")){return true;}
+        if((plateau.v[i].id==c)&&(plateau.v[i].ori=="horizontale")){return true;}
     }
     return false;
 }
@@ -28,12 +28,13 @@ int getsizecar(sgrid plateau,str c){
 
 void deplace(sgrid &plateau,str c,char dir){
     if(exist(plateau,c)){
+        int indexV=getIndexVoiture(plateau,c);
         int taille_v=getsizecar(plateau,c);
         coord* v=new coord[taille_v];
         //obtenir les coord de la voiture
         int is=0; //index suivant de v
-        for(int i=0;i<plateau.taille[0];i++){
-            for(int j=0;j<plateau.taille[1];j++){
+        for(int i=1;i<plateau.taille[0];i++){
+            for(int j=1;j<plateau.taille[1];j++){
                 if(plateau.val[i][j]==c){
                     v[is][0]=i;
                     v[is][1]=j;
@@ -55,6 +56,7 @@ void deplace(sgrid &plateau,str c,char dir){
                     for(int i=0;i<taille_v;i++){
                         plateau.val[v[i][0]][v[i][1]+1]=c;
                     }
+                    plateau.v[indexV].coord={v[0][0],v[0][1]+1};
                 }
                 else{std::cout<<"la voiture "<<c<<" ne peux pas bouger a droite"<<std::endl;}
 
@@ -70,6 +72,7 @@ void deplace(sgrid &plateau,str c,char dir){
                     for(int i=0;i<taille_v;i++){
                         plateau.val[v[i][0]][v[i][1]-1]=c;
                     }
+                plateau.v[indexV].coord={v[0][0],v[0][1]-1};
                 }
                 else{std::cout<<"la voiture "<<c<<" ne peux pas bouger a gauche"<<std::endl;}
             }
@@ -87,7 +90,9 @@ void deplace(sgrid &plateau,str c,char dir){
                     //la remetre une case vers le bas
                     for(int i=0;i<taille_v;i++){
                             plateau.val[v[i][0]+1][v[i][1]]=c;
+                            
                         }
+                    plateau.v[indexV].coord={v[0][0]+1,v[0][1]};
                 }
                 else{std::cout<<"la voiture "<<c<<" ne peux pas bouger en bas"<<std::endl;}
                 }
@@ -105,7 +110,9 @@ void deplace(sgrid &plateau,str c,char dir){
                     //la remetre une case vers le haut
                     for(int i=0;i<taille_v;i++){
                         plateau.val[v[i][0]-1][v[i][1]]=c;
+                        
                     }
+                    plateau.v[indexV].coord={v[0][0]-1,v[0][1]};
                 }
                 else{std::cout<<"la voiture "<<c<<" ne peux pas bouger en haut"<<std::endl;}
                 }

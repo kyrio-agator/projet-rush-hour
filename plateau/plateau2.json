@@ -1,16 +1,18 @@
 {
-    "nom": "Plateau 2",
-    "largeur": 6,
-    "hauteur": 6,
-    "voitures": [ 
-        {"id":"A", "couleur" : "Bleu", "x": 1, "y": 1, "taille": 2, "orientation" : "horizontale" }, 
-        {"id":"B", "couleur" : "Vert", "x": 3, "y": 1, "taille": 2, "orientation" : "verticale" },
-        {"id":"C", "couleur" : "Jaune", "x": 4, "y": 1, "taille": 3, "orientation" : "verticale" },
-        {"id":"D", "couleur" : "Orange", "x": 1, "y": 4, "taille": 3, "orientation" : "verticale" },
-        {"id":"E", "couleur" : "Rose", "x": 3, "y": 4, "taille": 3, "orientation" : "horizontale" },
-        {"id":"F", "couleur" : "Magenta", "x": 5, "y": 5, "taille": 2, "orientation" : "verticale" },
-        {"id":"G", "couleur" : "Cyan", "x": 3, "y": 6, "taille": 2, "orientation" : "horizontale" }
+    "nom" : "Plateau 2",
+    "largeur" : 12,
+    "hauteur" : 12,
+    "voitures": 
+    [
+      { "id": 1, "x": 4, "y": 6, "taille": 2, "orientation": "horizontale", "couleur": "vert" },
+      { "id": 2, "x": 6, "y": 8, "taille": 3, "orientation": "verticale", "couleur": "violet" },
+      { "id": 3, "x": 4, "y": 7, "taille": 3, "orientation": "horizontale", "couleur": "rouge" },
+      { "id": 4, "x": 0, "y": 0, "taille": 2, "orientation": "verticale", "couleur": "orange" },
+      { "id": 5, "x": 8, "y": 10, "taille": 2, "orientation": "horizontale", "couleur": "bleu clair" },
+      { "id": 6, "x": 3, "y": 5, "taille": 2, "orientation": "verticale", "couleur": "bleu" },
+      { "id": 7, "x": 0, "y": 2, "taille": 2, "orientation": "verticale", "couleur": "gris" },
+      { "id": 8, "x": 7, "y": 10, "taille": 3, "orientation": "horizontale", "couleur": "jaune" }
     ],
-    "voiture_dep": {"id":"X", "couleur" : "Rouge", "x": 1, "y": 3, "taille": 2, "orientation": "horizontale"},
-    "sortie" : {"x" : 7, "y": 3}
-    }
+    "sortie": { "x": 6, "y": 5 }
+  }
+  
