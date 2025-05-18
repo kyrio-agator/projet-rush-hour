@@ -8,7 +8,7 @@
         {"id":"C", "couleur" : "rvb(255, 128, 0)", "x": 6, "y": 1, "taille": 3, "orientation" : "verticale" },
         {"id":"D", "couleur" : "rvb(255, 105, 180)", "x": 4, "y": 4, "taille": 3, "orientation" : "verticale" },
         {"id":"E", "couleur" : "rvb(157, 113, 83", "x": 2, "y": 5, "taille": 2, "orientation" : "horizontale" },
-        {"id":"F", "couleur" : "rvb(238, 130, 238)", "x": 5, "y": 6, "taille": 2, "orientation" : "verticale" },
+        {"id":"F", "couleur" : "rvb(238, 130, 238)", "x": 5, "y": 5, "taille": 2, "orientation" : "verticale" },
         {"id":"G", "couleur" : "rvb(43, 255, 255)", "x": 5, "y": 4, "taille": 2, "orientation" : "horizontale" },
         {"id":"H", "couleur" : "rvb(255, 0, 255)", "x": 1, "y": 5, "taille": 2, "orientation" : "verticale" }
     ],

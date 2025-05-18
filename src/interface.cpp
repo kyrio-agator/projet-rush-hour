@@ -28,6 +28,7 @@ bool ifDebut(voiture v,int i,int j){
     if((v.coord[0]==i)and(v.coord[1]==j)){return true;}
     return false;
 }
+
 bool ifFin(voiture v, int i, int j) {
     if (v.ori == "horizontale") {
         return (v.coord[0] == i) && (v.coord[1] + v.taille - 1 == j);
@@ -87,7 +88,7 @@ void interfaceSFML(sf::RenderWindow &window, sgrid plateau,str vo) {
                 sprite.setScale(scaleX, scaleY);
                 sprite.setPosition(j * cellSizeX, i * cellSizeY);
 
-                // Si verticale, on pivote et ajuste la position
+                // Si verticale, on pivote et ajuste la position et scale
                 if (currentVoit.ori == "verticale") {
                     sprite.setOrigin(tex.getSize().x / 2.f, tex.getSize().y / 2.f);
                     sprite.setPosition(j * cellSizeX + cellSizeX / 2, i * cellSizeY + cellSizeY / 2);
@@ -154,6 +155,6 @@ void interfaceSFML(sf::RenderWindow &window, sgrid plateau,str vo) {
 
     window.draw(endSprite);
 
-    interfaceText(plateau);
+    //interfaceText(plateau);
     window.display();
 }

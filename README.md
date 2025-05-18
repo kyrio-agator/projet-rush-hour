@@ -17,13 +17,12 @@ cmake ..\CMakeLists.txt -G "MinGW Makefiles"
 cmake --build .  
 ./rush-hour.exe  
 
+## todo
+idToColor()    rvb(r,g,b)  ou  str couleur
+netoyé tout le code car c'est le bordel
+trouvé un moyen d'avoir l'IA qui donne les move au lieu de les executé lui meme
+
 ## timeline
-
-enlevé le tag niveau
-mettre un tag couleur    rvb(r,g,b)  ou  str couleur
-voiture_dep { x ,y,taille,ori}
-sortie{x,y} sortie en dehors du plateau
-
 
 **s1**  
 ✓ minimum jouable (pas interface graph)  

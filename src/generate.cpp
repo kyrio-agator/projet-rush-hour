@@ -21,11 +21,13 @@ grid initialisePlateau(int x, int y){
     return plateau;
 }
 
-void delete2Darray(sgrid plateau){
+void deletesgrid(sgrid plateau){
     for(int i=0;i<plateau.taille[0];i++){
         delete[] plateau.val[i];
     }
     delete[] plateau.val;
+    delete[] plateau.v;
+    
 }
 
 sgrid lirePlateauJson(str l) {

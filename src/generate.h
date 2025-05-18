@@ -7,5 +7,5 @@
 using json = nlohmann::json;
 
 grid initialisePlateau(int width, int height);
-void delete2Darray(sgrid grid);
+void deletesgrid(sgrid grid);
 sgrid lirePlateauJson(std::string l);
