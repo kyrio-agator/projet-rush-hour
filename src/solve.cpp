@@ -29,6 +29,7 @@ char inverseDir(char d) {
 }
 
 void betterSolve(sf::RenderWindow &window,sgrid &plateau,path& Gpath,int &AIstep){
+    std::cout<<"betterSolve "<<Gpath.t<<std::endl;
     voiture* liste_voitures=new voiture[plateau.nb_voit];
     for(int i=0;i<plateau.nb_voit;i++){
         liste_voitures[i]=plateau.v[i];
@@ -37,7 +38,7 @@ void betterSolve(sf::RenderWindow &window,sgrid &plateau,path& Gpath,int &AIstep
     for(int id_v=0;id_v<plateau.nb_voit;id_v++){
         voiture current_v=liste_voitures[id_v];
         for(char dir : {'h','b','g','d'}){
-            if(victoire(plateau)){return;}
+            if(victoire(plateau)){return;std::cout<<"victoire";}
             if(canMove(plateau,current_v,dir)){
                 std::cout<<current_v.id<<" "<<dir<<std::endl;
                 deplace(plateau,current_v.id,dir);
@@ -47,7 +48,7 @@ void betterSolve(sf::RenderWindow &window,sgrid &plateau,path& Gpath,int &AIstep
 
                 //interfaceSFML(window,plateau,current_v.id);
                 interfaceText(plateau);
-                sf::sleep(sf::milliseconds(100));
+                sf::sleep(sf::milliseconds(50));
                 
                 //si le coup a deja été fais, annulé le coup et passé a une autre "branche" des coup possible
                 if(doubleGridList(Gpath,plateau.val)){
@@ -58,7 +59,7 @@ void betterSolve(sf::RenderWindow &window,sgrid &plateau,path& Gpath,int &AIstep
 
                     //interfaceSFML(window,plateau,current_v.id);
                     interfaceText(plateau);
-                    sf::sleep(sf::milliseconds(100));
+                    sf::sleep(sf::milliseconds(50));
                 }
                 else{
                     betterSolve(window,plateau,Gpath,AIstep);
@@ -66,6 +67,7 @@ void betterSolve(sf::RenderWindow &window,sgrid &plateau,path& Gpath,int &AIstep
             }     
         }
     }
+    std::cout<<"dead end"<<std::endl;
     return;
 }
 

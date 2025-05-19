@@ -16,7 +16,7 @@ void freePath(path &Gpath) {
     Gpath.t = 0;
 }
 
-grid copieGrid(grid original, coord dim) {
+grid copieGrid(grid original, arr2 dim) {
     int rows = dim[0];
     int cols = dim[1];
 
@@ -71,8 +71,8 @@ int getIndexVoiture(sgrid plateau,str id){
     return 0;  //normalement jamais arrivé mais au cas ou pour quand meme return qlq chose 
 }
 
-coord* getCoordVoiture(voiture v){
-    coord* c=new coord[v.taille];
+arr2* getCoordVoiture(voiture v){
+    arr2* c=new arr2[v.taille];
     if(v.ori=="horizontale"){
         for(int i=0;i<v.taille;i++){
             c[i]={v.coord[0],v.coord[1]+i};}
@@ -91,7 +91,7 @@ bool victoire(sgrid plateau){
 }
 
 bool canMove(sgrid plateau,voiture v,char dir){
-    coord* v_coord=getCoordVoiture(v);
+    arr2* v_coord=getCoordVoiture(v);
     if(v.ori=="horizontale"){
         if(dir=='d'){return plateau.val[v_coord[v.taille-1][0]][v_coord[v.taille-1][1]+1]==emptychr;}
         if(dir=='g'){return plateau.val[v_coord[0][0]][v_coord[0][1]-1]==emptychr;}
@@ -129,7 +129,7 @@ void addValuePath(path &Gpath, grid g) {
     Gpath.t += 1;
 }
 
-bool equalGrid(grid g1,grid g2,coord dim){
+bool equalGrid(grid g1,grid g2,arr2 dim){
     int tailleX=dim[0];
     int tailleY=dim[1];
 

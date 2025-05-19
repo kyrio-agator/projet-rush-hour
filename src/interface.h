@@ -9,3 +9,4 @@
 void interfaceText(sgrid plateau);
 void interfaceSFML(sf::RenderWindow &window,sgrid plateau,str vo);
 sf::Color charToColor(str c);
+sf::Color tagToColor(str col);

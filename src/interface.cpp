@@ -11,17 +11,36 @@ void interfaceText(sgrid plateau){
 }
 
 sf::Color idToColor(str id) {
-    if(id==emptychr){return sf::Color(128, 128, 128);}
-    if(id==borderchr){return sf::Color(50, 50,50);}
-    if(id=="X"){return sf::Color::Red;}
-    if(id=="A"){return sf::Color::Blue;}
-    if(id=="B"){return sf::Color::Green;}
-    if(id=="C"){return sf::Color::Yellow;}
-    if(id=="D"){return sf::Color::Magenta;}
-    if(id=="E"){return sf::Color::Cyan;}
-    if(id=="F"){return sf::Color(139,69,19);}
-    if(id=="G"){return sf::Color(200,200,200);}
+    if(id==emptychr){return sf::Color(128,128,128);}
+    if(id==borderchr){return sf::Color(50,50,50);}
     else{return sf::Color::White;}
+}
+
+sf::Color tagToColor(str col) {
+    if((col[0]=='R')and(col[1]=='V')and(col[2]=='B')){
+        str R,G,B;int j=0;
+        for(unsigned int i=4;i<col.length()-1;i++){
+            if(col[i]==','){j++;}
+            
+            else if(j==0){R+=col[i];}
+            else if(j==1){G+=col[i];}
+            else if(j==2){B+=col[i];}
+        }
+        return sf::Color(std::stoi(R),std::stoi(G),std::stoi(B));
+    }
+    
+    if     (col=="Rouge")  {return sf::Color(255,0,  0  );}
+    else if(col=="Vert")   {return sf::Color(0  ,255,0  );}
+    else if(col=="Bleu")   {return sf::Color(0  ,0  ,255);}
+    else if(col=="Cyan")   {return sf::Color(0  ,255,255);}
+    else if(col=="Magenta"){return sf::Color(255,0  ,255);}
+    else if(col=="Jaune")  {return sf::Color(255,255,0  );}
+    else if(col=="Orange") {return sf::Color(255,128,0  );}
+    else if(col=="Rose")   {return sf::Color(255,105,180);}
+    else if(col=="Violet") {return sf::Color(240,130,240);}
+    else if(col=="Maron")  {return sf::Color(160,120,100);}
+    
+    return sf::Color::White;
 }
 
 bool ifDebut(voiture v,int i,int j){
@@ -61,14 +80,8 @@ void interfaceSFML(sf::RenderWindow &window, sgrid plateau,str vo) {
         for (int j = 0; j < plateau.taille[1]; ++j) {
             str currentId = plateau.val[i][j];
 
-            // Par défaut, dessiner une case colorée
-            sf::RectangleShape cell(sf::Vector2f(cellSizeX, cellSizeY));
-            cell.setPosition(j * cellSizeX, i * cellSizeY);
-            cell.setFillColor(idToColor(currentId));
-            window.draw(cell);
-            
             // Si c'est une voiture, dessiner une texture par-dessus
-            if (currentId != emptychr && currentId != borderchr) {
+            if (currentId != emptychr and currentId != borderchr) {
                 voiture currentVoit = getvoiture(plateau, currentId);
 
                 sf::Texture tex = tex_voit2;
@@ -80,7 +93,8 @@ void interfaceSFML(sf::RenderWindow &window, sgrid plateau,str vo) {
 
                 sf::Sprite sprite;
                 sprite.setTexture(tex);
-
+                sprite.setColor(tagToColor(currentVoit.color));
+                
                 float scaleX = cellSizeX / tex.getSize().x;
                 float scaleY = cellSizeY / tex.getSize().y;
 
@@ -95,8 +109,16 @@ void interfaceSFML(sf::RenderWindow &window, sgrid plateau,str vo) {
                     sprite.setRotation(90);
                     sprite.setScale(scaleY, scaleX); // Inverser X et Y pour compenser la rotation
                 }
-            sprite.setColor(idToColor(currentId));
             window.draw(sprite);
+        }
+        else{
+            sf::RectangleShape cell(sf::Vector2f(cellSizeX, cellSizeY));
+            cell.setPosition(j * cellSizeX, i * cellSizeY);
+            if((currentId==emptychr)or(currentId==borderchr)){
+                cell.setFillColor(idToColor(currentId));
+            }
+            window.draw(cell);
+            
         }
             
 
@@ -155,6 +177,5 @@ void interfaceSFML(sf::RenderWindow &window, sgrid plateau,str vo) {
 
     window.draw(endSprite);
 
-    //interfaceText(plateau);
     window.display();
 }

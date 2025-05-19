@@ -12,13 +12,20 @@ https://github.com/nlohmann/json
 
 
 ## compilation + execution  
+### windows   
 cd .\build\  
 cmake ..\CMakeLists.txt -G "MinGW Makefiles"  
 cmake --build .  
 ./rush-hour.exe  
+### linux
+cd .build/
+cmake ../CMakeLists.txt 
+cmake --build .  
+./rush-hour.exe  
 
 ## todo
-idToColor()    rvb(r,g,b)  ou  str couleur
+
+inversé les sprite
 netoyé tout le code car c'est le bordel
 trouvé un moyen d'avoir l'IA qui donne les move au lieu de les executé lui meme
 

@@ -11,7 +11,7 @@ void deplace(sgrid &plateau,str c,char dir){
     if(exist(plateau,c)){
         voiture v=getvoiture(plateau,c);
         int indexV=getIndexVoiture(plateau,c);
-        coord* v_coord=getCoordVoiture(v);
+        arr2* v_coord=getCoordVoiture(v);
 
         if(v.ori=="horizontale"){
             if(dir=='d'){

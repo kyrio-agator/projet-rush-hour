@@ -7,7 +7,6 @@
 
 
 
-
 int main(){
     std::srand(std::time(nullptr));
 
@@ -22,7 +21,6 @@ int main(){
 
     if(l!=""){
         sf::RenderWindow window(sf::VideoMode(600, 600), "rush-hour");
-
         sgrid plateau=lirePlateauJson(l);
         str vo=plateau.v_dep;char di=' ';
     
