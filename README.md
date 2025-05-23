@@ -26,13 +26,6 @@ cmake ../CMakeLists.txt
 cmake --build .  
 ./rush-hour.exe  
 
-## todo s4
-
-✓ inversé les sprite  
-netoyé tout le code car c'est le bordel  
-✓ trouvé un moyen d'avoir l'IA qui donne les move au lieu de les executé lui meme  
-resoudre le probleme de pointer de schrodinger ,crash random meme sans recompilation
-    -> solution  ->  tout changer en vector
 ## timeline
 
 **s1**  

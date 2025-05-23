@@ -1,10 +1,13 @@
 #include "type.h"
 
-
-
-
-
-
+void deletesgrid(sgrid plateau){
+    for(int i=0;i<plateau.taille[0];i++){
+        delete[] plateau.val[i];
+    }
+    delete[] plateau.val;
+    delete[] plateau.v;
+    
+}
 
 void printVector(std::vector<Move> v){
     for(unsigned int i=0;i<v.size();i++){
@@ -71,14 +74,14 @@ void afficherSgrid(sgrid& g) {
     }
 }
 
-voiture getvoiture(sgrid plateau,str id){
+voiture getvoiture(sgrid &plateau,str id){
     for(int i=0;i<plateau.nb_voit;i++){
         if(plateau.v[i].id==id){return plateau.v[i];}
     }
     assert(false && "getvoiture: id not found in plateau");
 }
 
-int getIndexVoiture(sgrid plateau,str id){
+int getIndexVoiture(sgrid &plateau,str id){
     for(int i=0;i<plateau.nb_voit;i++){
         if(plateau.v[i].id==id){return i;}
     }
@@ -106,12 +109,14 @@ bool victoire(sgrid plateau){
 
 bool canMove(sgrid plateau,voiture v,char dir){
     arr2* v_coord=getCoordVoiture(v);
+
+    bool r=false;
     if(v.ori=="horizontale"){
-        if(dir=='d'){return plateau.val[v_coord[v.taille-1][0]][v_coord[v.taille-1][1]+1]==emptychr;}
-        if(dir=='g'){return plateau.val[v_coord[0][0]][v_coord[0][1]-1]==emptychr;}
+        if(dir=='d'){if(plateau.val[v_coord[v.taille-1][0]][v_coord[v.taille-1][1]+1]==emptychr){r=true;}}
+        if(dir=='g'){if(plateau.val[v_coord[0]         [0]][v_coord[0]         [1]-1]==emptychr){r=true;}}
     }else{
-        if(dir=='b'){return plateau.val[v_coord[v.taille-1][0]+1][v_coord[v.taille-1][1]]==emptychr;}
-        if(dir=='h'){return plateau.val[v_coord[0][0]-1][v_coord[0][1]]==emptychr;}
+        if(dir=='b'){if(plateau.val[v_coord[v.taille-1][0]+1][v_coord[v.taille-1][1]]==emptychr){r=true;}}
+        if(dir=='h'){if(plateau.val[v_coord[0]         [0]-1][v_coord[0]         [1]]==emptychr){r=true;}}
     }     
-    return false;
+    return r;
 } 

@@ -25,14 +25,21 @@ int main(){
             path solveHistory;
             solveHistory.push_back(copieSgrid(plateau));
             std::vector<Move> solveM;
+            bool solveV=false;
             sf::RenderWindow window(sf::VideoMode(600, 600), "rush-hour");
+
             std::cout<<"calcule"<<std::endl;
-            betterSolveMOV(window,solveHistory,solveM); //calcule la solution et interface
+            betterSolveMOV(window,solveHistory,solveM,solveinterface,solveV); //calcule la solution et interface
             std::cout<<"calcule termine "<<std::endl;
 
 
             for(unsigned int i=0;i<solveM.size();i++){
-                std::cout<<solveM[i][0]<<" "<<solveM[i][1]<<std::endl;
+                std::cout<<"coup "<<i<<" "<<solveM[i][0]<<" "<<solveM[i][1]<<std::endl;
+                if(!solveinterface){
+                    interfaceSFML(window,plateau,solveM[i][0]);
+                    deplace(plateau,solveM[i][0],solveM[i][1][0]);  //solveM[i][1][0] car str=>char
+                    sf::sleep(sf::milliseconds(500));
+                }
             }
             deletesgrid(plateau); 
             window.close();
@@ -84,7 +91,7 @@ int main(){
                     di=' ';
                 }
 
-                if(victoire(plateau)or(di=='v')){
+                if(victoire(plateau)){
                     std::cout<<"gagne"<<std::endl;
                     window.close();}
                 
@@ -93,6 +100,5 @@ int main(){
             deletesgrid(plateau);
         }
     }
-    return 0;
 }
 

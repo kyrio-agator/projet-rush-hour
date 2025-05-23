@@ -27,6 +27,7 @@ void deplace(sgrid &plateau,str c,char dir){
                     plateau.v[indexV].coord={v_coord[0][0],v_coord[0][1]+1};
                 }
                 else{std::cout<<"la voiture "<<c<<" ne peux pas bouger a droite"<<std::endl;}
+                
             }
             if(dir=='g'){
                 if(canMove(plateau,v,dir)){
@@ -41,6 +42,7 @@ void deplace(sgrid &plateau,str c,char dir){
                 plateau.v[indexV].coord={v_coord[0][0],v_coord[0][1]-1};
                 }
                 else{std::cout<<"la voiture "<<c<<" ne peux pas bouger a gauche"<<std::endl;}
+                
             }
         }
         else{
@@ -58,6 +60,7 @@ void deplace(sgrid &plateau,str c,char dir){
                     plateau.v[indexV].coord={v_coord[0][0]+1,v_coord[0][1]};
                 }
                 else{std::cout<<"la voiture "<<c<<" ne peux pas bouger en bas"<<std::endl;}
+                
 
             }
             if(dir=='h'){
@@ -74,8 +77,11 @@ void deplace(sgrid &plateau,str c,char dir){
                     plateau.v[indexV].coord={v_coord[0][0]-1,v_coord[0][1]};
                 }
                 else{std::cout<<"la voiture "<<c<<" ne peux pas bouger en haut"<<std::endl;}
+                
             }
         }
+    
+        delete[] v_coord;
     }
     else{std::cout<<"la voiture n'existe pas"<<std::endl;}
 }

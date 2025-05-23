@@ -14,4 +14,4 @@ char inverseDir(char d);
 bool equalGrid(grid g1,grid g2,arr2 dim);
 bool doubleGridList(path l);
 
-void betterSolveMOV(sf::RenderWindow &window,path& Gpath,std::vector<Move> &moveList);
+void betterSolveMOV(sf::RenderWindow &window,path& Gpath,std::vector<Move> &moveList,bool interface,bool &vic);
