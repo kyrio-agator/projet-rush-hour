@@ -4,10 +4,10 @@
     "largeur": 6,
     "hauteur": 6,
     "voitures": [ 
-        {"id":"A","couleur":"Bleu","x": 4, "y": 1, "taille": 3, "orientation" : "verticale" }, 
-        {"id":"B","couleur":"Vert","x": 1, "y": 4, "taille": 3, "orientation" : "verticale" },
-        {"id":"C","couleur":"Jaune","x": 2, "y": 4, "taille": 3, "orientation" : "horizontale" }
+        {"id":"A","couleur":"bleu","x": 4, "y": 1, "taille": 3, "orientation" : "verticale" }, 
+        {"id":"B","couleur":"vert","x": 1, "y": 4, "taille": 3, "orientation" : "verticale" },
+        {"id":"C","couleur":"jaune","x": 2, "y": 4, "taille": 3, "orientation" : "horizontale" }
     ],
-    "voiture_dep": {"id":"X","couleur":"RVB(255,0,0)","x": 1, "y": 3, "taille": 2, "orientation": "horizontale"},
+    "voiture_dep": {"id":"X","couleur":"rvb(255,0,0)","x": 1, "y": 3, "taille": 2, "orientation": "horizontale"},
     "sortie" : {"x" : 7, "y": 3}
 }

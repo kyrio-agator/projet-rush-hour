@@ -3,11 +3,15 @@
 #include "type.h"
 #include "move.h"
 #include "interface.h"
-#include <cstdlib>
 #include <ctime>
 
+#include <SFML/Graphics.hpp>
+#include <SFML/Window.hpp>
+#include <SFML/System.hpp>
 
 
-std::array<str,2> randomAI(sgrid plateau);
 char inverseDir(char d);
-void betterSolve(sf::RenderWindow &window,sgrid &plateau,path& Gpath,int &AIstep);
+bool equalGrid(grid g1,grid g2,arr2 dim);
+bool doubleGridList(path l);
+
+void betterSolveMOV(sf::RenderWindow &window,path& Gpath,std::vector<Move> &moveList);

@@ -1,23 +1,7 @@
 #include "interface.h"
 
-
-void interfaceText(sgrid plateau){
-    for(int i=0;i<plateau.taille[0];i++){
-        for(int j=0;j<plateau.taille[1];j++){
-            std::cout<<plateau.val[i][j];
-        }
-        std::cout<<std::endl;
-    }
-}
-
-sf::Color idToColor(str id) {
-    if(id==emptychr){return sf::Color(128,128,128);}
-    if(id==borderchr){return sf::Color(50,50,50);}
-    else{return sf::Color::White;}
-}
-
 sf::Color tagToColor(str col) {
-    if((col[0]=='R')and(col[1]=='V')and(col[2]=='B')){
+    if((col[0]=='r')and(col[1]=='v')and(col[2]=='b')){
         str R,G,B;int j=0;
         for(unsigned int i=4;i<col.length()-1;i++){
             if(col[i]==','){j++;}
@@ -29,16 +13,16 @@ sf::Color tagToColor(str col) {
         return sf::Color(std::stoi(R),std::stoi(G),std::stoi(B));
     }
     
-    if     (col=="Rouge")  {return sf::Color(255,0,  0  );}
-    else if(col=="Vert")   {return sf::Color(0  ,255,0  );}
-    else if(col=="Bleu")   {return sf::Color(0  ,0  ,255);}
-    else if(col=="Cyan")   {return sf::Color(0  ,255,255);}
-    else if(col=="Magenta"){return sf::Color(255,0  ,255);}
-    else if(col=="Jaune")  {return sf::Color(255,255,0  );}
-    else if(col=="Orange") {return sf::Color(255,128,0  );}
-    else if(col=="Rose")   {return sf::Color(255,105,180);}
-    else if(col=="Violet") {return sf::Color(240,130,240);}
-    else if(col=="Maron")  {return sf::Color(160,120,100);}
+    if     (col=="rouge")  {return sf::Color(255,0,  0  );}
+    else if(col=="vert")   {return sf::Color(0  ,255,0  );}
+    else if(col=="bleu")   {return sf::Color(0  ,0  ,255);}
+    else if(col=="cyan")   {return sf::Color(0  ,255,255);}
+    else if(col=="magenta"){return sf::Color(255,0  ,255);}
+    else if(col=="jaune")  {return sf::Color(255,255,0  );}
+    else if(col=="orange") {return sf::Color(255,128,0  );}
+    else if(col=="rose")   {return sf::Color(255,105,180);}
+    else if(col=="violet") {return sf::Color(240,130,240);}
+    else if(col=="maron")  {return sf::Color(160,120,100);}
     
     return sf::Color::White;
 }
@@ -57,10 +41,20 @@ bool ifFin(voiture v, int i, int j) {
     return false;
 }
 
+void interfaceText(sgrid plateau){
+    for(int i=0;i<plateau.taille[0];i++){
+        for(int j=0;j<plateau.taille[1];j++){
+            std::cout<<plateau.val[i][j];
+        }
+        std::cout<<std::endl;
+    }
+}
+
 void interfaceSFML(sf::RenderWindow &window, sgrid plateau,str vo) {
     window.clear(sf::Color::White);
 
     //load les texture
+    
     static sf::Texture tex_in, tex_out,tex_voit1,tex_voit2,tex_voit3;
     static bool texturesLoaded = false;
     if (!texturesLoaded) {
@@ -71,14 +65,24 @@ void interfaceSFML(sf::RenderWindow &window, sgrid plateau,str vo) {
         tex_voit3.loadFromFile("../assets/voit3.png");
         texturesLoaded = true;
     }
-
     float cellSizeX = window.getSize().x / plateau.taille[1];
     float cellSizeY = window.getSize().y / plateau.taille[0];
+
+
+
 
     //grid   
     for (int i = 0; i < plateau.taille[0]; ++i) {
         for (int j = 0; j < plateau.taille[1]; ++j) {
+            
             str currentId = plateau.val[i][j];
+
+            sf::RectangleShape cell(sf::Vector2f(cellSizeX, cellSizeY));
+            cell.setPosition(j * cellSizeX, i * cellSizeY);
+            if(currentId==borderchr){cell.setFillColor(sf::Color(50,50,50));}
+            else{cell.setFillColor(sf::Color(128,128,128));}
+            window.draw(cell);
+
 
             // Si c'est une voiture, dessiner une texture par-dessus
             if (currentId != emptychr and currentId != borderchr) {
@@ -110,15 +114,6 @@ void interfaceSFML(sf::RenderWindow &window, sgrid plateau,str vo) {
                     sprite.setScale(scaleY, scaleX); // Inverser X et Y pour compenser la rotation
                 }
             window.draw(sprite);
-        }
-        else{
-            sf::RectangleShape cell(sf::Vector2f(cellSizeX, cellSizeY));
-            cell.setPosition(j * cellSizeX, i * cellSizeY);
-            if((currentId==emptychr)or(currentId==borderchr)){
-                cell.setFillColor(idToColor(currentId));
-            }
-            window.draw(cell);
-            
         }
             
 

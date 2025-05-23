@@ -7,38 +7,43 @@
 
 
 
-int main(){
-    std::srand(std::time(nullptr));
 
+int main(){
     str l=selectJson("../plateau");
 
-    str reponceIA =" "; bool AIsolve=false; int frameTime=100; int AIstep=0; std::array<str,2> AIaction;
-    std::cout<<"utilise l'IA ?[y/n]: ";std::cin>>reponceIA;
-    if(reponceIA=="y"){
-        AIsolve=true;
-        frameTime=10;}
 
+    str reponceIA =" "; bool AIsolve=false;
+    std::cout<<"utilise l'IA ?[y/n]: ";std::cin>>reponceIA;
+    if(reponceIA=="y"){AIsolve=true;}
 
     if(l!=""){
-        sf::RenderWindow window(sf::VideoMode(600, 600), "rush-hour");
         sgrid plateau=lirePlateauJson(l);
         str vo=plateau.v_dep;char di=' ';
-    
+
+        //AI
         if(AIsolve){
-            //interfaceSFML(window,plateau,vo);
+            path solveHistory;
+            solveHistory.push_back(copieSgrid(plateau));
+            std::vector<Move> solveM;
+            sf::RenderWindow window(sf::VideoMode(600, 600), "rush-hour");
+            std::cout<<"calcule"<<std::endl;
+            betterSolveMOV(window,solveHistory,solveM); //calcule la solution et interface
+            std::cout<<"calcule termine "<<std::endl;
 
-            path solveL;
-            solveL.g=new grid[0];solveL.t=0;solveL.dim=plateau.taille;
 
-            betterSolve(window,plateau,solveL,AIstep);
-            
-            std::cout<<"fini"<<std::endl;
+            for(unsigned int i=0;i<solveM.size();i++){
+                std::cout<<solveM[i][0]<<" "<<solveM[i][1]<<std::endl;
+            }
             deletesgrid(plateau); 
-            freePath(solveL);
-            std::cout<<AIstep;
-            //window.close();
+            window.close();
+            
+        
+        
+
         }
+        //player
         else{
+            sf::RenderWindow window(sf::VideoMode(600, 600), "rush-hour");
             while (window.isOpen()){
                 interfaceSFML(window,plateau,vo);
 
@@ -83,12 +88,11 @@ int main(){
                     std::cout<<"gagne"<<std::endl;
                     window.close();}
                 
-                sf::sleep(sf::milliseconds(frameTime));
+                sf::sleep(sf::milliseconds(100));
                 }
             deletesgrid(plateau);
         }
     }
-
     return 0;
 }
 

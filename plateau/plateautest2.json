@@ -1,0 +1,13 @@
+{
+    "nom": "Plateau test2",
+    "niveau": 1,
+    "largeur": 6,
+    "hauteur": 6,
+    "voitures": [ 
+        {"id":"B","couleur":"violet","x": 3, "y": 4, "taille": 3, "orientation" : "verticale" },
+        {"id":"D","couleur":"bleu","x": 4, "y": 3, "taille": 2, "orientation" : "verticale" },
+        {"id":"E","couleur":"magenta","x": 4, "y": 5, "taille": 2, "orientation" : "horizontale" }
+    ],
+    "voiture_dep": {"id":"X","couleur":"rvb(255,0,0)","x": 1, "y": 3, "taille": 2, "orientation": "horizontale"},
+    "sortie" : {"x" : 7, "y": 3}
+}

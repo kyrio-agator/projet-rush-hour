@@ -1,21 +1,18 @@
 #include "type.h"
 
 
-#include <iostream>
 
-void freePath(path &Gpath) {
-    for (int i = 0; i < Gpath.t; i++) {
-        int rows = Gpath.dim[0];
-        for (int j = 0; j < rows; j++) {
-            delete[] Gpath.g[i][j]; // ligne de str[]
-        }
-        delete[] Gpath.g[i]; // ligne
+
+
+
+
+void printVector(std::vector<Move> v){
+    for(unsigned int i=0;i<v.size();i++){
+        std::cout<<v[i][0]<<v[i][1]<<" ";
     }
-    delete[] Gpath.g; // tableau principal
-    Gpath.g = nullptr;
-    Gpath.t = 0;
+    std::cout<<std::endl;
 }
-
+ 
 grid copieGrid(grid original, arr2 dim) {
     int rows = dim[0];
     int cols = dim[1];
@@ -29,6 +26,23 @@ grid copieGrid(grid original, arr2 dim) {
     }
 
     return newGrid;
+}
+
+sgrid copieSgrid(sgrid original){
+    sgrid copy;
+    copy.fin=original.fin;
+    copy.nb_voit=original.nb_voit;
+    copy.nom=original.nom;
+    copy.taille=original.taille;
+    copy.v_dep=original.v_dep;
+
+    copy.v = new voiture[copy.nb_voit];
+    for(int i=0;i<copy.nb_voit;i++){
+        copy.v[i]=original.v[i];
+    }
+    copy.val=copieGrid(original.val,original.taille);
+
+    return copy;
 }
 
 void afficherSgrid(sgrid& g) {
@@ -61,14 +75,14 @@ voiture getvoiture(sgrid plateau,str id){
     for(int i=0;i<plateau.nb_voit;i++){
         if(plateau.v[i].id==id){return plateau.v[i];}
     }
-    return plateau.v[0];  //normalement jamais arrivé mais au cas ou pour quand meme return qlq chose 
+    assert(false && "getvoiture: id not found in plateau");
 }
 
 int getIndexVoiture(sgrid plateau,str id){
     for(int i=0;i<plateau.nb_voit;i++){
         if(plateau.v[i].id==id){return i;}
     }
-    return 0;  //normalement jamais arrivé mais au cas ou pour quand meme return qlq chose 
+    assert(false && "getIndexVoiture: id not found in plateau");
 }
 
 arr2* getCoordVoiture(voiture v){
@@ -101,53 +115,3 @@ bool canMove(sgrid plateau,voiture v,char dir){
     }     
     return false;
 } 
-
-void addValuePath(path &Gpath, grid g) {
-    // Alloue un nouveau tableau de grid avec +1 place
-    grid* new_g = new grid[Gpath.t + 1];
-
-    // Copie tous les anciens grids (en profondeur)
-    for (int i = 0; i < Gpath.t; i++) {
-        new_g[i] = copieGrid(Gpath.g[i], Gpath.dim);
-    }
-
-    // Copie du nouveau grid (état actuel)
-    new_g[Gpath.t] = copieGrid(g, Gpath.dim);
-
-    // Libère l'ancienne mémoire
-    for (int i = 0; i < Gpath.t; i++) {
-        int rows = Gpath.dim[0];
-        for (int j = 0; j < rows; j++) {
-            delete[] Gpath.g[i][j]; // str[] à chaque ligne
-        }
-        delete[] Gpath.g[i]; // ligne complète
-    }
-    delete[] Gpath.g; // tableau de grids
-
-    // Remplace les valeurs dans Gpath
-    Gpath.g = new_g;
-    Gpath.t += 1;
-}
-
-bool equalGrid(grid g1,grid g2,arr2 dim){
-    int tailleX=dim[0];
-    int tailleY=dim[1];
-
-    for(int i=0;i<tailleX;i++){
-        for(int j=0;j<tailleY;j++){
-            if(g1[i][j]!=g2[i][j]){return false;}
-        }
-    }
-
-    return true;
-}
-
-bool doubleGridList(path l_grid,grid g){   //cherche si le dernier element est deja dans la list
-    for (int i = 0; i < l_grid.t - 1; i++) {
-        if (equalGrid(l_grid.g[i], g,l_grid.dim)) {
-            return true;
-        }
-    }
-    return false;
-}
-
