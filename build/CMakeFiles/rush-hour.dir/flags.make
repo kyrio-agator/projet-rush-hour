@@ -6,5 +6,5 @@ CXX_DEFINES =
 
 CXX_INCLUDES = @CMakeFiles/rush-hour.dir/includes_CXX.rsp
 
-CXX_FLAGS = -Wall
+CXX_FLAGS = -g -Wall
 

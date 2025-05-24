@@ -26,6 +26,10 @@ cmake ../CMakeLists.txt
 cmake --build .  
 ./rush-hour.exe  
 
+### todo
+vidé le vector quand il est trop plein mais que doubledetection marche quand meme
+
+
 ## timeline
 
 **s1**  

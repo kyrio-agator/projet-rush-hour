@@ -11,13 +11,12 @@
 using str=std::string;
 using grid=str**;
 using arr2=std::array<int,2>;
-const bool solveinterface=true;
 using Move= std::array<str,2>;
 
 const str emptychr="-";   //charactere pour les espace vide 
 const str borderchr="/";  //charactere pour les bordure
-const unsigned int maxdepth=100; //max recurence de solve, limite la solution a 100 coup
-
+const unsigned int maxdepth=80; //max recurence de solve, limite la solution a 100 coup
+const bool solveinterface=true;//interface pendant que sa solve
 
 
 struct voiture{

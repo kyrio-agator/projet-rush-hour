@@ -28,10 +28,9 @@ int main(){
             std::vector<Move> solveM;
             bool solveV=false;
             sf::RenderWindow window(sf::VideoMode(600, 600), "rush-hour");
-
             std::cout<<"calcule"<<std::endl;
             time_t debutTime=time(NULL);
-            betterSolveMOV(window,solveHistory,solveMemoire,solveM,solveinterface,solveV); //calcule la solution et interface
+            betterSolveMOV(window,solveHistory,solveMemoire,solveM,solveV); //calcule la solution et interface
             std::cout<<"solution de "<<solveM.size()<<" coup trouve en  "<<time(NULL)-debutTime<<" seconde"<<std::endl;
 
 

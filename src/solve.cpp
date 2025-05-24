@@ -24,7 +24,7 @@ bool doubleGridList(std::vector<grid> l,arr2 t){   //cherche si le dernier eleme
 
 
 
-void betterSolveMOV(sf::RenderWindow &window,path& Gpath,std::vector<grid> &memory,std::vector<Move> &moveList,bool interface,bool &vic){
+void betterSolveMOV(sf::RenderWindow &window,path& Gpath,std::vector<grid> &memory,std::vector<Move> &moveList,bool &vic){
     if(vic){return;}
     
     sf::Event event;
@@ -37,13 +37,14 @@ void betterSolveMOV(sf::RenderWindow &window,path& Gpath,std::vector<grid> &memo
 
     for(int id_v=0;id_v<Gpath.back().nb_voit;id_v++){
         voiture current_v=liste_voitures[id_v];
-        for(char dir : {'d','b','g','h'}){ 
+        std::array<char,2> dir_pos = {'h','b'};
+        if(current_v.ori=="horizontale"){dir_pos = {'d','g'};}
+        for(char dir : dir_pos){ 
             if(canMove(Gpath.back(),current_v,dir)){
-                
                 sgrid tempsgrid=copieSgrid(Gpath.back()); 
 
                 deplace(tempsgrid,current_v.id,dir);
-                if(interface){interfaceSFML(window,tempsgrid,current_v.id);}
+                if(solveinterface){interfaceSFML(window,tempsgrid,current_v.id);}
                 
                 
                 moveList.push_back({current_v.id,str(1,dir)});
@@ -63,7 +64,7 @@ void betterSolveMOV(sf::RenderWindow &window,path& Gpath,std::vector<grid> &memo
                 }
                 else{
                     //std::cout<<"descend"<<std::endl;
-                    betterSolveMOV(window,Gpath,memory,moveList,interface,vic);
+                    betterSolveMOV(window,Gpath,memory,moveList,vic);
                     //std::cout<<"remonte"<<std::endl;
                     if(vic){return;}
                     moveList.pop_back(); 
