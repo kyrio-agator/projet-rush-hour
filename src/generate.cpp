@@ -21,8 +21,6 @@ grid initialisePlateau(int x, int y){
     return plateau;
 }
 
-
-
 sgrid lirePlateauJson(str l) {
     std::ifstream ifs(l.c_str());
     sgrid plateau;

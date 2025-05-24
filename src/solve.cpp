@@ -1,14 +1,5 @@
 #include "solve.h"
 
-char inverseDir(char d) {
-    switch(d) {
-        case 'h': return 'b';
-        case 'b': return 'h';
-        case 'g': return 'd';
-        case 'd': return 'g';
-    }
-    return d;
-}
 
 bool equalGrid(grid g1,grid g2,arr2 dim){
     for(int i=0;i<dim[0];i++){
@@ -19,11 +10,11 @@ bool equalGrid(grid g1,grid g2,arr2 dim){
     return true;
 }
 
-bool doubleGridList(path l){   //cherche si le dernier element est deja dans la list
+bool doubleGridList(std::vector<grid> l,arr2 t){   //cherche si le dernier element est deja dans la list
     if(l.size()==1){return false;}
-    sgrid last=l.back();
+    grid last=l.back();
     for (unsigned int i = 0; i < l.size()-1; i++) {
-        if (equalGrid(l.at(i).val, last.val,l.at(i).taille)) {
+        if (equalGrid(l.at(i), last,t)) {
             return true;
         }
     }
@@ -33,7 +24,7 @@ bool doubleGridList(path l){   //cherche si le dernier element est deja dans la 
 
 
 
-void betterSolveMOV(sf::RenderWindow &window,path& Gpath,std::vector<Move> &moveList,bool interface,bool &vic){
+void betterSolveMOV(sf::RenderWindow &window,path& Gpath,std::vector<grid> &memory,std::vector<Move> &moveList,bool interface,bool &vic){
     if(vic){return;}
     
     sf::Event event;
@@ -57,20 +48,22 @@ void betterSolveMOV(sf::RenderWindow &window,path& Gpath,std::vector<Move> &move
                 
                 moveList.push_back({current_v.id,str(1,dir)});
                 Gpath.push_back(copieSgrid(tempsgrid));
+                memory.push_back(copieGrid(tempsgrid.val,tempsgrid.taille));
 
-                if(victoire(Gpath.back())){std::cout<<"victoire";vic=true;return;}
+                if(victoire(Gpath.back())){vic=true;return;}
                 
                 deletesgrid(tempsgrid);
 
                 //si le coup a deja été fais ou si on est trop profond dans l'arbre, annulé le coup et passé a une autre "branche" des coup possible
-                if((doubleGridList(Gpath))or(moveList.size()>=maxdepth)){
+                if((doubleGridList(memory,Gpath[0].taille))or(moveList.size()>=maxdepth)){
                     //std::cout<<"double"<<std::endl;
                     moveList.pop_back();
                     Gpath.pop_back();
+                    memory.pop_back();
                 }
                 else{
                     //std::cout<<"descend"<<std::endl;
-                    betterSolveMOV(window,Gpath,moveList,interface,vic);
+                    betterSolveMOV(window,Gpath,memory,moveList,interface,vic);
                     //std::cout<<"remonte"<<std::endl;
                     if(vic){return;}
                     moveList.pop_back(); 

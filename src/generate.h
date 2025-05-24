@@ -7,5 +7,4 @@
 using json = nlohmann::json;
 
 grid initialisePlateau(int width, int height);
-
 sgrid lirePlateauJson(std::string l);

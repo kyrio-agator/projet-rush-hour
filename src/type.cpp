@@ -8,13 +8,6 @@ void deletesgrid(sgrid plateau){
     delete[] plateau.v;
     
 }
-
-void printVector(std::vector<Move> v){
-    for(unsigned int i=0;i<v.size();i++){
-        std::cout<<v[i][0]<<v[i][1]<<" ";
-    }
-    std::cout<<std::endl;
-}
  
 grid copieGrid(grid original, arr2 dim) {
     int rows = dim[0];
@@ -46,32 +39,6 @@ sgrid copieSgrid(sgrid original){
     copy.val=copieGrid(original.val,original.taille);
 
     return copy;
-}
-
-void afficherSgrid(sgrid& g) {
-    std::cout << "Nom : " << g.nom << "\n";
-    std::cout << "Nombre de voitures : " << g.nb_voit << "\n";
-    std::cout << "Voiture de depart : " << g.v_dep << "\n";
-    std::cout << "Taille : " << g.taille[0] << " x " << g.taille[1] << "\n";
-    std::cout << "Sortie : (" << g.fin[0] << ", " << g.fin[1] << ")\n\n";
-
-    std::cout << "Liste des voitures :\n";
-    for (int i = 0; i < g.nb_voit; ++i) {
-        const voiture& v = g.v[i];
-        std::cout << "- ID : " << v.id
-                  << ", Couleur : " << v.color
-                  << ", Coord : (" << v.coord[0] << ", " << v.coord[1] << ")"
-                  << ", Taille : " << v.taille
-                  << ", Orientation : " << v.ori << "\n";
-    }
-
-    std::cout << "\nGrille :\n";
-    for (int i = 0; i < g.taille[0]; ++i) {
-        for (int j = 0; j < g.taille[1]; ++j) {
-            std::cout << g.val[i][j];
-        }
-        std::cout << "\n";
-    }
 }
 
 voiture getvoiture(sgrid &plateau,str id){
@@ -107,16 +74,3 @@ bool victoire(sgrid plateau){
     return plateau.val[x][y]==plateau.v_dep;
 }
 
-bool canMove(sgrid plateau,voiture v,char dir){
-    arr2* v_coord=getCoordVoiture(v);
-
-    bool r=false;
-    if(v.ori=="horizontale"){
-        if(dir=='d'){if(plateau.val[v_coord[v.taille-1][0]][v_coord[v.taille-1][1]+1]==emptychr){r=true;}}
-        if(dir=='g'){if(plateau.val[v_coord[0]         [0]][v_coord[0]         [1]-1]==emptychr){r=true;}}
-    }else{
-        if(dir=='b'){if(plateau.val[v_coord[v.taille-1][0]+1][v_coord[v.taille-1][1]]==emptychr){r=true;}}
-        if(dir=='h'){if(plateau.val[v_coord[0]         [0]-1][v_coord[0]         [1]]==emptychr){r=true;}}
-    }     
-    return r;
-} 

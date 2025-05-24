@@ -7,6 +7,20 @@ bool exist(sgrid plateau,str c){
     return false;
 }
 
+bool canMove(sgrid plateau,voiture v,char dir){
+    arr2* v_coord=getCoordVoiture(v);
+
+    bool r=false;
+    if(v.ori=="horizontale"){
+        if(dir=='d'){if(plateau.val[v_coord[v.taille-1][0]][v_coord[v.taille-1][1]+1]==emptychr){r=true;}}
+        if(dir=='g'){if(plateau.val[v_coord[0]         [0]][v_coord[0]         [1]-1]==emptychr){r=true;}}
+    }else{
+        if(dir=='b'){if(plateau.val[v_coord[v.taille-1][0]+1][v_coord[v.taille-1][1]]==emptychr){r=true;}}
+        if(dir=='h'){if(plateau.val[v_coord[0]         [0]-1][v_coord[0]         [1]]==emptychr){r=true;}}
+    }     
+    return r;
+} 
+
 void deplace(sgrid &plateau,str c,char dir){
     if(exist(plateau,c)){
         voiture v=getvoiture(plateau,c);
